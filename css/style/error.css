@@ -1,0 +1,81 @@
+html,body{
+    width: 100%;/*1440*/
+    height: 100%;
+    overflow-x: hidden;
+    font-size: 100%;
+    background-color: #272A2F;
+    font-family: "Proxima Nova Rg", serif;
+}
+a{
+    text-decoration: none;
+    color:#ffffff;
+}
+#container{
+    height: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    background-image: url("../../img/new.png");
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+    overflow: hidden;
+    background-position: 0;
+}
+
+.row {
+    height: inherit;
+}
+.text{
+    position: relative;
+    display: flex;
+}
+.content{
+    margin-bottom: 25%;
+    margin-top: 24%;
+    text-align: right;
+    text-transform: uppercase;
+    color:#CFCFCF;
+    font-size: 1.5em;
+    opacity: 0;
+}
+.img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 502px;
+    height: 660px;
+
+}
+.start{
+    background: transparent url("../../img/pobotStart.png") no-repeat 100%;
+}
+.stop{
+    background: transparent url("../../img/robotStop.png") no-repeat 100%;
+    -webkit-transition: background .2s, -webkit-transform .2s;
+    transition:  background .2s, transform .2s;
+}
+@keyframes show{
+    from {opacity:0;}
+    to {opacity: 1;}
+}
+
+
+
+figure img{
+  margin-bottom: 20px;
+
+}
+button{
+    background-color: transparent;
+    border-radius: 20px;
+    border: 3px solid #F7EA0A;
+    color: #ffffff;
+    outline: none;
+}
+button:hover{
+    background-color:#F7EA0A;
+}
+button a:hover{
+    color: #303030;
+    font-weight: bolder;
+    text-decoration: none;
+ }

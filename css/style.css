@@ -1,0 +1,716 @@
+@charset "UTF-8";
+html{
+  width: 100%;
+}
+body {
+  background-color: #23485B;
+width: 100%;
+  font-family: "PF BeauSans Pro";
+}
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+
+}
+h3 {
+  font-size: 100%; }
+
+.link {
+  text-size: 0.7em;
+  color: #5495d5;
+  text-transform: lowercase; }
+
+.break {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  height: 0; }
+
+.iconHammer {
+  width: 1.25em;
+  height: 1.25em;
+  display: inline;
+  background-image: url("../img/icons/hammer.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  display: inline-block; }
+
+.iconEye {
+  width: 1.25em;
+  height: 1.25em;
+  display: inline;
+  background-image: url("../img/icons/eye.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  display: inline-block; }
+
+#map {
+  height: 300px;
+  width: 100%; }
+
+.clientData {
+  color: #fefefe;
+  position: relative; }
+  .clientData .clientDataOnlineStatus {
+    margin: 0 0 1em 0; }
+    .clientData .clientDataOnlineStatus span:nth-child(1) {
+      background-image: url("../img/icons/green-dot.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      width: 1em;
+      height: 0.7em;
+      display: inline-block; }
+    .clientData .clientDataOnlineStatus .clientEdit {
+      background-image: url("../img/icons/edit.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 30%;
+      height: 2em;
+      display: inline-block; }
+  .clientData .clientDataLabel {
+    color: #767676;
+    font-size: 0.7em;
+    word-spacing: normal; }
+  .clientData .clientDataFitures {
+    padding-left: 0; }
+    .clientData .clientDataFitures div {
+      margin-bottom: 0.4em; }
+    .clientData .clientDataFitures .card_inscription {
+      font-size: 0.85em; }
+    .clientData .clientDataFitures .clientPhoneVisibility {
+      background-image: url("../img/icons/hide.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 40%; }
+    .clientData .clientDataFitures .clientEmail {
+      background-image: url("../img/icons/contact.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 40%; }
+  .clientData .clientPhoto {
+    max-height: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    background-image: url("../img/icons/photo-camera.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 6em; }
+    .clientData .clientPhoto img {
+      height: 100%;
+      width: 100%; }
+  .clientData .clientDataLanguages {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-top: 0.75em; }
+    .clientData .clientDataLanguages ul {
+      margin: 0;
+      padding: 0; }
+      .clientData .clientDataLanguages ul li {
+        margin-right: 0.25em;
+        display: inline-block; }
+        .clientData .clientDataLanguages ul li:not(:first-child)::before {
+          content: '\B7';
+          margin-right: 0.25em; }
+  .clientData .clientDataReview {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-top: 0.75em; }
+    .clientData .clientDataReview .positivReview {
+      color: #41f0ad; }
+    .clientData .clientDataReview .negativeReview {
+      color: #f8705a; }
+  .clientData .clientDataAboutClient {
+    margin-top: 0.75em;
+    font-size: 0.8em; }
+  .clientData .clientDataIcons .socialIcons {
+    height: 3em; }
+  .clientData .clientDataIcons .socialIcons:nth-child(1) {
+    background-image: url("../img/icons/skype.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .socialIcons:nth-child(2) {
+    background-image: url("../img/icons/whatsapp.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .socialIcons:nth-child(3) {
+    background-image: url("../img/icons/facebook.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .socialIcons:nth-child(4) {
+    background-image: url("../img/icons/instagram.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .socialIcons:nth-child(5) {
+    background-image: url("../img/icons/viber.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .paySistem {
+    height: 3em; }
+  .clientData .clientDataIcons .paySistem:nth-child(6) {
+    background-image: url("../img/icons/paypal.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .paySistem:nth-child(7) {
+    background-image: url("../img/icons/visa.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .paySistem:nth-child(8) {
+    background-image: url("../img/icons/mastercard.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataGraphic {
+    margin-bottom: 2em; }
+  .clientData .clientDataStatistic {
+    margin-top: 1.25em; }
+    .clientData .clientDataStatistic h3 {
+      text-size: 1em;
+      line-height: 2em;
+      text-transform: uppercase;
+      text-align: center; }
+    .clientData .clientDataStatistic .clientDataStatisticOpen {
+      color: blue; }
+    .clientData .clientDataStatistic .clientDataStatisticOpen,
+    .clientData .clientDataStatistic .clientDataStatisticCloses {
+      font-size: 5em; }
+    .clientData .clientDataStatistic div:nth-child(3) {
+      font-sise: 1em;
+      color: #767676; }
+  .clientData .formPrivateData {
+    width: 84%;
+    left: 8%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: #303030;
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    z-index: 50; }
+    .clientData .formPrivateData div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .clientData .formPrivateData > div:nth-child(-n+2) {
+      width: 30%;
+      padding-right: 4em; }
+    .clientData .formPrivateData > div:nth-child(3) {
+      width: 40%;
+      padding-right: 4em; }
+    .clientData .formPrivateData input[type="submit"] {
+      margin-left: auto;
+      margin-right: 3.75em;
+      margin-bottom: 3.125em;
+      background-color: #5494d4;
+      font-size: 0.75em;
+      line-height: 3.33em;
+      padding: 0 1.65em 0 1.65em;
+      border: 0;
+      border-radius: 1.65em;
+      color: #fff; }
+    .clientData .formPrivateData .formPrivateDateSection,
+    .clientData .formPrivateData .formPrivateMessageSection,
+    .clientData .formPrivateData .formPrivatePaySection {
+      font-size: 0.8em; }
+      .clientData .formPrivateData .formPrivateDateSection input,
+      .clientData .formPrivateData .formPrivateMessageSection input,
+      .clientData .formPrivateData .formPrivatePaySection input {
+        width: 100%;
+        background-color: transparent;
+        border-bottom: 1px solid #4d4d4d;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+        font-size: 0.95em;
+        height: 2.5em;
+        vertical-align: baselain;
+        outline: none;
+        color: #fff; }
+      .clientData .formPrivateData .formPrivateDateSection h3,
+      .clientData .formPrivateData .formPrivateMessageSection h3,
+      .clientData .formPrivateData .formPrivatePaySection h3 {
+        font-size: 1.35em;
+        margin-bottom: 2.3em; }
+    .clientData .formPrivateData .formPrivateMessageSection,
+    .clientData .formPrivateData .formPrivatePaySection {
+      width: 100%; }
+    .clientData .formPrivateData .formPrivatePaySection {
+      margin: 4em 0 4em 0; }
+    .clientData .formPrivateData .formPrivateNotifications {
+      font-size: 0.8em; }
+      .clientData .formPrivateData .formPrivateNotifications div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 2em; }
+        .clientData .formPrivateData .formPrivateNotifications div span:nth-child(1) {
+          margin-right: auto; }
+        .clientData .formPrivateData .formPrivateNotifications div label {
+          text-transform: uppercase; }
+        .clientData .formPrivateData .formPrivateNotifications div input[type="radio"] {
+          margin: 0 1em 0 1em;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          width: 1em;
+          height: 1em;
+          border: 1px solid #c5c5c5;
+          border-radius: 50%; }
+          .clientData .formPrivateData .formPrivateNotifications div input[type="radio"]:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: block; }
+          .clientData .formPrivateData .formPrivateNotifications div input[type="radio"]:checked:before {
+            background-color: #5490cf; }
+      .clientData .formPrivateData .formPrivateNotifications h3 {
+        font-size: 1.35em;
+        margin-bottom: 3em; }
+
+.clientsRequests {
+  background-color: #fefefe;
+  margin-top: 7.2em; }
+  .clientsRequests .clientsRequestsOpen > h3,
+  .clientsRequests .clientsRequestsCurrent > h3 {
+    font-size: 1em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding: 0; }
+  .clientsRequests .clientsRequestsOpen > div,
+  .clientsRequests .clientsRequestsCurrent > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stratch;
+    -ms-flex-align: stratch;
+    align-items: stratch;
+    border: 1px solid #ccc;
+    padding: 0; }
+  .clientsRequests .clientsRequestsOpen .root .clientsRequestsOpenIcon,
+  .clientsRequests .clientsRequestsCurrent .root .clientsRequestsOpenIcon {
+    background-image: url("../img/icons/target.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1.3em; }
+  .clientsRequests .clientsRequestsOpen .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresLabel,
+  .clientsRequests .clientsRequestsCurrent .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresLabel {
+    color: #c9c9c9;
+    font-size: 0.65em; }
+  .clientsRequests .clientsRequestsOpen .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresTowns,
+  .clientsRequests .clientsRequestsCurrent .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresTowns {
+    color: #222222;
+    font-size: 0.75em;
+    display: inline-block;
+    width: 37%; }
+    .clientsRequests .clientsRequestsOpen .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresTowns span,
+    .clientsRequests .clientsRequestsCurrent .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresTowns span {
+      display: block; }
+  .clientsRequests .clientsRequestsOpen .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresDate > div,
+  .clientsRequests .clientsRequestsCurrent .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresDate > div {
+    width: 2.5em;
+    height: 2.5em;
+    background-color: #f2f2f2;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px; }
+    .clientsRequests .clientsRequestsOpen .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresDate > div .clientsRequestsOpenFituresDateNumber,
+    .clientsRequests .clientsRequestsCurrent .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresDate > div .clientsRequestsOpenFituresDateNumber {
+      font-size: 0.8em;
+      text-align: center; }
+    .clientsRequests .clientsRequestsOpen .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresDate > div .clientsRequestsOpenFituresDateDay,
+    .clientsRequests .clientsRequestsCurrent .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresDate > div .clientsRequestsOpenFituresDateDay {
+      font-size: 0.5em;
+      text-transform: lowercase;
+      text-align: center; }
+  .clientsRequests .clientsRequestsOpen .root .rootMap .rootMapLocationPoint,
+  .clientsRequests .clientsRequestsCurrent .root .rootMap .rootMapLocationPoint {
+    background-image: url("../img/icons/location_point.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 0.9em; }
+  .clientsRequests .clientsRequestsOpen .root .rootMap div:nth-child(2),
+  .clientsRequests .clientsRequestsCurrent .root .rootMap div:nth-child(2) {
+    font-size: 0.6em;
+    letter-spacing: 0px; }
+  .clientsRequests .clientsRequestsOpen .root .rootPrice,
+  .clientsRequests .clientsRequestsCurrent .root .rootPrice {
+    height: 35%; }
+    .clientsRequests .clientsRequestsOpen .root .rootPrice .rootPriceIcon,
+    .clientsRequests .clientsRequestsCurrent .root .rootPrice .rootPriceIcon {
+      background-image: url("../img/icons/price.svg");
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-size: 0.9em; }
+    .clientsRequests .clientsRequestsOpen .root .rootPrice .rootPriceNumber,
+    .clientsRequests .clientsRequestsCurrent .root .rootPrice .rootPriceNumber {
+      font-size: 1.25em; }
+  .clientsRequests .clientsRequestsOpen .cargoType,
+  .clientsRequests .clientsRequestsCurrent .cargoType {
+    font-size: 0.75em; }
+    .clientsRequests .clientsRequestsOpen .cargoType > span:first-child,
+    .clientsRequests .clientsRequestsCurrent .cargoType > span:first-child {
+      width: 1.25em;
+      height: 1.25em;
+      display: inline-block;
+      background-image: url("../img/icons/lorry.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%; }
+    .clientsRequests .clientsRequestsOpen .cargoType .clientsRequestsOpenСargoType,
+    .clientsRequests .clientsRequestsCurrent .cargoType .clientsRequestsOpenСargoType {
+      color: #222222; }
+      .clientsRequests .clientsRequestsOpen .cargoType .clientsRequestsOpenСargoType > span:first-child,
+      .clientsRequests .clientsRequestsCurrent .cargoType .clientsRequestsOpenСargoType > span:first-child {
+        width: 1.25em;
+        height: 1.25em;
+        display: inline-block;
+        background-image: url("../img/icons/yellow_dot.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 70%; }
+    .clientsRequests .clientsRequestsOpen .cargoType .clientsRequestsOpenСargoTypeName,
+    .clientsRequests .clientsRequestsCurrent .cargoType .clientsRequestsOpenСargoTypeName {
+      color: #222222;
+      font-size: 0.75em; }
+  .clientsRequests .clientsRequestsOpen .comments,
+  .clientsRequests .clientsRequestsCurrent .comments {
+    position: relative;
+    color: #222222; }
+    .clientsRequests .clientsRequestsOpen .comments p,
+    .clientsRequests .clientsRequestsCurrent .comments p {
+      font-size: 0.75em; }
+    .clientsRequests .clientsRequestsOpen .comments > div span:first-child,
+    .clientsRequests .clientsRequestsCurrent .comments > div span:first-child {
+      width: 1.25em;
+      height: 1.25em;
+      display: inline-block;
+      background-image: url("../img/icons/comments.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 70%; }
+    .clientsRequests .clientsRequestsOpen .comments .foolComents,
+    .clientsRequests .clientsRequestsCurrent .comments .foolComents {
+      width: 80%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 1em;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+      background-color: #fff;
+      z-index: 10;
+      display: none; }
+      .clientsRequests .clientsRequestsOpen .comments .foolComents .link,
+      .clientsRequests .clientsRequestsCurrent .comments .foolComents .link {
+        text-align: right; }
+    .clientsRequests .clientsRequestsOpen .comments .deleverAddress,
+    .clientsRequests .clientsRequestsCurrent .comments .deleverAddress {
+      height: 35%; }
+      .clientsRequests .clientsRequestsOpen .comments .deleverAddress .deleverAddressIcon,
+      .clientsRequests .clientsRequestsCurrent .comments .deleverAddress .deleverAddressIcon {
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        background-image: url("../img/icons/root.svg");
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 100%; }
+      .clientsRequests .clientsRequestsOpen .comments .deleverAddress .clientsRequestsOpenLabel,
+      .clientsRequests .clientsRequestsCurrent .comments .deleverAddress .clientsRequestsOpenLabel {
+        display: inline-block; }
+      .clientsRequests .clientsRequestsOpen .comments .deleverAddress div,
+      .clientsRequests .clientsRequestsCurrent .comments .deleverAddress div {
+        font-size: 0.75em; }
+  .clientsRequests .clientsRequestsOpen .rate,
+  .clientsRequests .clientsRequestsCurrent .rate {
+    color: #222222; }
+    .clientsRequests .clientsRequestsOpen .rate .clientsRequestsOpenLabel,
+    .clientsRequests .clientsRequestsCurrent .rate .clientsRequestsOpenLabel {
+      text-align: center; }
+    .clientsRequests .clientsRequestsOpen .rate .clientsRequestsOpenRate,
+    .clientsRequests .clientsRequestsCurrent .rate .clientsRequestsOpenRate {
+      font-size: 1.65em;
+      text-align: center; }
+    .clientsRequests .clientsRequestsOpen .rate .rateQuentity,
+    .clientsRequests .clientsRequestsOpen .rate .rateViewes,
+    .clientsRequests .clientsRequestsCurrent .rate .rateQuentity,
+    .clientsRequests .clientsRequestsCurrent .rate .rateViewes {
+      font-size: 0.8em; }
+  .clientsRequests .clientsRequestsOpen .buyRate,
+  .clientsRequests .clientsRequestsCurrent .buyRate {
+    color: #222222;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .clientsRequests .clientsRequestsOpen .buyRate button,
+    .clientsRequests .clientsRequestsCurrent .buyRate button {
+      border: 0px solid;
+      border-radius: 16px;
+      padding: 0 1em 0 1em;
+      background-color: #5494d4;
+      line-height: 2.8em;
+      font-size: 0.68em;
+      color: #fff;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }
+  .clientsRequests .clientsRequestsOpen .clientsRequestsOpenLabel,
+  .clientsRequests .clientsRequestsCurrent .clientsRequestsOpenLabel {
+    color: #c9c9c9;
+    font-size: 0.75em; }
+  .clientsRequests .clientsRequestsOpen .rootStatus .rootStatusLength,
+  .clientsRequests .clientsRequestsOpen .rootStatus .rootStatusDelever,
+  .clientsRequests .clientsRequestsCurrent .rootStatus .rootStatusLength,
+  .clientsRequests .clientsRequestsCurrent .rootStatus .rootStatusDelever {
+    height: 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c9c9c9), to(#c9c9c9));
+    background: -webkit-linear-gradient(#c9c9c9, #c9c9c9);
+    background: -o-linear-gradient(#c9c9c9, #c9c9c9);
+    background: linear-gradient(#c9c9c9, #c9c9c9);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    margin: 2.5em 0 2.5em 0; }
+  .clientsRequests .clientsRequestsOpen .rootStatus .rootStatusLength span:nth-child(1),
+  .clientsRequests .clientsRequestsCurrent .rootStatus .rootStatusLength span:nth-child(1) {
+    display: block;
+    height: 1px;
+    width: 50%;
+    border: 0px solid #5394d6;
+    background-color: #5394d6;
+    -webkit-box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    position: absolute;
+    left: 0;
+    top: 50%; }
+  .clientsRequests .clientsRequestsOpen .rootStatus .rootStatusLength span:nth-child(2),
+  .clientsRequests .clientsRequestsCurrent .rootStatus .rootStatusLength span:nth-child(2) {
+    display: block;
+    height: 0.5em;
+    width: 0.5em;
+    border: 1px solid #5394d6;
+    border-radius: 50%;
+    background-color: #5394d6;
+    -webkit-box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    position: absolute;
+    left: 50%; }
+  .clientsRequests .clientsRequestsOpen .rootStatus .rootStatusLength span:nth-child(3),
+  .clientsRequests .clientsRequestsCurrent .rootStatus .rootStatusLength span:nth-child(3) {
+    display: block;
+    height: 1em;
+    position: absolute;
+    left: 15%;
+    top: -1.5em;
+    color: #303030;
+    font-size: 0.7em; }
+  .clientsRequests .clientsRequestsOpen .rootStatus .rootStatusLength span:nth-child(4),
+  .clientsRequests .clientsRequestsCurrent .rootStatus .rootStatusLength span:nth-child(4) {
+    display: block;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    left: 75%;
+    top: -1.25em;
+    color: #5394d6; }
+  .clientsRequests .clientsRequestsOpen .rootStatus .rootStatusDelever span:nth-child(1),
+  .clientsRequests .clientsRequestsCurrent .rootStatus .rootStatusDelever span:nth-child(1) {
+    display: block;
+    height: 1px;
+    width: 10%;
+    border: 0px solid #5394d6;
+    background-color: #5394d6;
+    -webkit-box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    position: absolute;
+    left: 0;
+    top: 50%; }
+  .clientsRequests .clientsRequestsOpen .rootStatus .rootStatusDelever span:nth-child(2),
+  .clientsRequests .clientsRequestsCurrent .rootStatus .rootStatusDelever span:nth-child(2) {
+    display: block;
+    height: 0.5em;
+    width: 0.5em;
+    border: 1px solid #5394d6;
+    border-radius: 50%;
+    background-color: #5394d6;
+    -webkit-box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    position: absolute;
+    left: 10%; }
+  .clientsRequests .clientsRequestsOpen .rootStatus .rootStatusDelever span:nth-child(3),
+  .clientsRequests .clientsRequestsCurrent .rootStatus .rootStatusDelever span:nth-child(3) {
+    display: block;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    left: 75%;
+    top: -1.25em;
+    color: #5394d6; }
+  .clientsRequests .applications h3 {
+    font-size: 1em;
+    padding: 0;
+    margin: 3.75em 0 2.2em 4.5em; }
+  .clientsRequests .applications .deliverFitures {
+    display: none; }
+  .clientsRequests .applications .applicationsTable {
+    color: #bababa; }
+    .clientsRequests .applications .applicationsTable .applicationsTableRow .applicationsTableCol {
+      border-bottom: 1px solid #e3e3e3;
+      padding: 1em;
+      text-align: center;
+      vertical-align: top; }
+    .clientsRequests .applications .applicationsTable .applicationsTableRow .applicationsTableCol:nth-child(1) {
+      border-right: 1px solid #e3e3e3; }
+    .clientsRequests .applications .applicationsTable .applicationsTableRow .applicationsTableCol:nth-child(2) {
+      border-right: 1px solid #e3e3e3; }
+    .clientsRequests .applications .applicationsTable .applicationsTableRow .applicationsTableCol:nth-child(3) {
+      border-right: 1px solid #e3e3e3; }
+    .clientsRequests .applications .applicationsTable .applicationsTableRow .applicationsTableCol:nth-child(4) {
+      border-right: 1px solid #e3e3e3;
+      text-align: left; }
+    .clientsRequests .applications .applicationsTable .applicationsTableRow .applicationsTableCol:nth-child(5) .applicationPrise,
+    .clientsRequests .applications .applicationsTable .applicationsTableRow .applicationsTableCol:nth-child(5) .currencyType {
+      display: block; }
+  .clientsRequests nav {
+    margin: 2.8em 0 6em; }
+    .clientsRequests nav ul {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .clientsRequests nav ul .back {
+        width: 1.25em;
+        height: 1.25em;
+        display: inline-block;
+        background-image: url("../img/icons/back.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%; }
+      .clientsRequests nav ul .next {
+        width: 1.25em;
+        height: 1.25em;
+        display: inline-block;
+        background-image: url("../img/icons/next.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%; }
+    .clientsRequests nav .page-link {
+      border: 0px; }
+      .clientsRequests nav .page-link:hover {
+        border-bottom: 2px solid #5494d4;
+        border-radius: 0; }
+  .clientsRequests .clientsRequestsReviews {
+    padding-left: 6.56em;
+    list-style: none; }
+    .clientsRequests .clientsRequestsReviews li {
+      margin-right: 0.15em;
+      display: inline-block; }
+      .clientsRequests .clientsRequestsReviews li:not(:first-child)::before {
+        content: '\B7';
+        margin-right: 0.15em; }
+    .clientsRequests .clientsRequestsReviews .clientsRequestsReviewsAll {
+      font-size: 1em; }
+    .clientsRequests .clientsRequestsReviews .clientsRequestsReviewsPositive {
+      font-size: 0.75em; }
+      .clientsRequests .clientsRequestsReviews .clientsRequestsReviewsPositive span:nth-child(1) {
+        color: #02dc30; }
+      .clientsRequests .clientsRequestsReviews .clientsRequestsReviewsPositive span:nth-child(2) {
+        color: #c0c0c0; }
+    .clientsRequests .clientsRequestsReviews .clientsRequestsReviewsNegative {
+      font-size: 0.75em; }
+      .clientsRequests .clientsRequestsReviews .clientsRequestsReviewsNegative span:nth-child(1) {
+        color: #f88777; }
+      .clientsRequests .clientsRequestsReviews .clientsRequestsReviewsNegative span:nth-child(2) {
+        color: #c0c0c0; }
+  .clientsRequests .clientsRequestsStory {
+    text-align: justify;
+    padding: 2em 6.56em; }
+  .clientsRequests .clientsRequestsSlogan,
+  .clientsRequests .clientsRequestsLocation {
+    text-align: center; }
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.1em; } }
+
+@media (min-width: 1300px) {
+  body {
+    font-size: 1.2em; } }
+
+@media (min-width: 991.6px) {
+  .root,
+  .cargoType,
+  .comments,
+  .rate {
+    background: -webkit-gradient(linear, left top, left bottom, from(#c9c9c9), to(#c9c9c9));
+    background: -webkit-linear-gradient(#c9c9c9, #c9c9c9);
+    background: -o-linear-gradient(#c9c9c9, #c9c9c9);
+    background: linear-gradient(#c9c9c9, #c9c9c9);
+    background-size: 1px 70%;
+    background-repeat: no-repeat;
+    background-position: 99% center; } }
+
+@media (max-width: 991.5px) {
+  body {
+    font-size: 1.2em; }
+    body .clientsRequests .clientsRequestsOpen {
+      font-size: 1.1em; }
+      body .clientsRequests .clientsRequestsOpen .root,
+      body .clientsRequests .clientsRequestsOpen .cargoType,
+      body .clientsRequests .clientsRequestsOpen .comments,
+      body .clientsRequests .clientsRequestsOpen .rate,
+      body .clientsRequests .clientsRequestsOpen .buyRate {
+        border: 1px solid #c9c9c9; }
+      body .clientsRequests .clientsRequestsOpen .root .clientsRequestsOpenIcon {
+        background-position: 85%; }
+      body .clientsRequests .clientsRequestsOpen .cargoType {
+        text-align: center; }
+        body .clientsRequests .clientsRequestsOpen .cargoType .clientsRequestsOpenСargoTypeName {
+          color: #222222;
+          font-size: 1em; } }
+
+@media (max-width: 767.5px) {
+  body {
+    font-size: 1.0em; } }

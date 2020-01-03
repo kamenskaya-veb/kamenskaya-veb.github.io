@@ -1,0 +1,142 @@
+.div_container{
+    font-family: "PF BeauSans Pro";
+    margin: 100px auto;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+}
+ h5{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+.square_box{
+    margin: 0;
+    width: 151px;
+    height: 140px;
+    text-align: center;
+    text-align: -webkit-center;
+    overflow: hidden;
+    position: relative;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    margin-top: 150px;
+    position: absolute;
+    left: 16%;
+}
+#request_small{
+    border: 2px solid #41E3A8;
+    font-size: 4em;
+    background-color: transparent;
+
+}
+#request_medium{
+    border: 2px solid #FEF568;
+    font-size: 4em;
+    background-color: transparent;
+}
+#request_large{
+    border: 2px solid #FE8BB7;
+    font-size: 4em;
+    background-color: transparent;
+}
+.p{
+    margin-top: 110px;
+}
+.calendar{
+    width:325px;
+    height: 382px;
+    box-shadow: 0 14px 28px rgb(203,203,203), 0 10px 10px rgb(203,203,203);
+    padding-top: 25px ;
+    padding-right:10px ;
+    margin: 50px 20px;
+}
+.input_group{
+    width:325px;
+    height: 382px;
+    margin: 50px 20px;
+}
+.rowRequest{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #FAFAFA;
+}
+.request_box{
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(203,203,203);
+}
+.input_style{
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(203,203,203);
+    outline: none;
+    resize: none;
+    padding-left:10px;
+    padding-top: 3px;
+}
+.label_style{
+    color:rgb(203,203,203);
+    font-size: 0.7em;
+}
+.input_style::placeholder{
+    color:rgb(203,203,203);
+    font-size: 0.9em;
+    padding-left:10px;
+    vertical-align: center;
+    line-height: 2.5;
+}
+select{
+    color:rgb(203,203,203);
+    font-size: 0.9em;
+    padding-left:10px;
+}
+.input_style:focus{
+    border: 1px solid #57CFE8;
+}
+.inp_invalid{
+    border: 1px solid #F66F59;
+}
+.request_box2{
+
+    margin: 0 auto;
+}
+.request_address{
+width: 62%;
+    margin: 0 auto;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.request_address div label{
+    margin-left: 10px;
+}
+.town{
+    width: 290px;
+    height: 50px;
+    background: transparent url(../../img/icon/chevron-down.svg) no-repeat 95% 50% / 1em 1em;
+}
+.street{
+    width: 323px;
+    height: 50px;
+    background: transparent url(../../img/icon/chevron-down.svg) no-repeat 95% 50% / 1em 1em;
+}
+.nmb{
+    width: 60px;
+    height: 50px;
+}
+

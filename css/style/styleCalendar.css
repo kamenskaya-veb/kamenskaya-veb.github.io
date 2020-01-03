@@ -1,0 +1,54 @@
+#calendar2 {
+  width: 320px;
+  height: 360px;
+  font-family: "PF BeauSans Pro";
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+
+}
+#calendar2 thead tr:last-child {
+  font-size: small;
+  color: rgb(85, 85, 85);
+
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+  color: rgb(50, 50, 50);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendar2 tbody td {
+  color: rgb(44, 86, 122);
+  padding: 5px;
+
+}
+/*#calendar2 tbody td:nth-child(n+6) {
+
+}*/
+#calendar2 tbody td.today {
+ /* background: rgb(220, 0, 0);*/
+  color: #57CFE8;
+}
+.colors{
+  color:  #F66F59;
+}
+.borders{
+  border-bottom: 1px solid #5a6268;
+  border-top: 1px solid #5a6268;
+padding-top: 10px;
+}
+table{
+  border-collapse: separate;
+  border-spacing: 7px 8px;
+}
+.color_grey{
+color:rgb(203,203,203);
+}
+.day_border{
+  border: 1px solid #57CFE8;
+  border-radius: 50%;
+}
+.day_border_white{
+  border: 1px solid #fafafa;
+}

@@ -1,0 +1,76 @@
+.info{
+    text-align: center;
+}
+.infoCount b{
+    color:#57CFE8;
+    font-size: 1.3em;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.infoCount:first-letter{
+    text-transform: capitalize;
+}
+.infoStars{
+     font-size: 1.3em;
+     color: #F7EA0A;
+    margin: 10px auto;
+ }
+.infoTable{
+    margin: 10px auto;
+}
+.infoTel{
+    font-size: 1.2em;
+}
+.infoData{
+    font-size: 0.6em;
+    margin: 5px auto;
+}
+.infoData:first-letter{
+    text-transform: capitalize;
+}
+.infoCiti{
+    margin: 0 auto;
+    font-size: 0.8em;
+    text-transform: capitalize;
+}
+.typeFace:first-letter{
+    text-transform: capitalize;
+}
+
+.flagSmall{
+    background-color: #41E3A8;
+    border: 1px solid #41E3A8;
+}
+.flagMedium{
+    background-color: #FEF568;
+    border: 1px solid #FEF568;
+}
+.flagLarge{
+    background-color:#FE8BB7;
+    border: 1px solid #FE8BB7;
+}
+#span{
+    text-transform: uppercase;
+    font-size: 1em;
+}
+input:-moz-placeholder{
+     opacity: 1;
+     transition: opacity .3s ease;
+ }
+input::-moz-placeholder{
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+input::-webkit-input-placeholder{
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+input:focus:-moz-placeholder{
+    opacity: 0;
+}
+input:focus::-moz-placeholder{
+    opacity: 0;
+}
+input:focus::-webkit-input-placeholder{
+    opacity:0;
+}

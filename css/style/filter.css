@@ -1,0 +1,79 @@
+.filter{
+    margin-top: 3%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 20px;
+    font-family: "PF BeauSans Pro";
+}
+.filter div{
+    margin: auto 20px;
+    color: #A3A5A4;
+    position: relative;
+}
+label{
+    font-size: 0.7em;
+}
+input{
+    outline: none;
+    border: 1px solid #A3A5A4;
+    background-color: transparent;
+    padding-left: 10px;
+    font-size: 0.8em;
+    color: #5a6268;
+    width: 150px;
+    height: 30px;
+}
+.select{
+    position: absolute;
+    top:27px;
+    display: none;
+    text-align: left;
+    border:1px solid #57CFE8;
+    border-top:none;
+    width: 150px;
+    max-height: 150px;
+    overflow: auto;
+    padding-left: 0;
+    font-size: 0.9em;
+    z-index: 100;
+
+    background-color:#FAFAFA;
+}
+input:focus{
+    border:1px solid #57CFE8;
+}
+.select li{
+    height: 30px;
+    list-style-type: none;
+    font-size: 1em;
+    color:#5a6268;
+    padding-left: 10px;
+    padding-top: 10px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+
+}
+.select li:hover{
+    background-color: #57CFE8;
+}
+.select img{
+    width:20px;
+    height:20px;
+}
+b{
+    font-weight: normal;
+}
+
+
+button{
+    outline: none;
+    border: 1px solid #57CFE8;
+    padding-left: 10px;
+    font-size: 0.8em;
+    color: #5a6268;
+    width: 150px;
+    height: 30px;
+    background-color: #57CFE8;
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вектор/Создание заявки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cach">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script defer src="libs/jquery/jquery-3.4.1.min.js"></script>
+    <script defer src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script defer src="js/navbarMenu.js"></script>
+    <script defer src="js/up.js"></script>
+    <script defer src="js/request_creation.js"></script>
+    <script defer src="js/scriptCalendar.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css">
+    <link rel="stylesheet" href="css/style/navbarMenu.css">
+    <link rel="stylesheet" href="css/media/navbarMenu.css">
+    <link rel="stylesheet" href="css/media/media.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style/up.css">
+    <link rel="stylesheet" href="css/style/request_creation.css">
+    <link rel="stylesheet" href="css/style/styleCalendar.css">
+
+
+</head>
+<body>
+<a id="button" class="vis"></a>
+<div class="container-fluid" id="container_fluid">
+    <div class="row rowNavbar">
+        <div class="offset-1 col-11 ">
+            <nav class="navbarMenu">
+                <a class="" href="index.php"><img src="img/vektor.png" alt="" width="130" height="50"></a>
+                <button class="burger"></button>
+                <ul class="menuList" id="menuList">
+                    <li><a class="" href="index.php">Главная</a></li>
+                    <li><a class="" href="delivery.html ">Перевозчики</a></li>
+                    <li><a class="" href="#">Заказчики</a></li>
+                    <li class="dropdownMenu"><a class="" href="#">Сервис &#8594;</a>
+                        <ul class="dropdownItem" >
+                            <li><a href="index.php#info">О нас</a></li>
+                            <li><a href="index.php#work">Как это работает?</a></li>
+                            <li><a href="index.php#news">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="" href="index.php#qwert">Тарифы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row rowSvg">
+        <div class="col-12 AboutSvg">
+            <div class="AboutsvgItem">
+                <svg class="horizontalLine" >
+                    <line x1="0"  x2="100%"  stroke="#57CFE8" stroke-width="9" />
+                </svg>
+                <svg class="horizontalCircle"  fill="#57CFE8">
+                    <circle  cx="8%"cy="50%" />
+                    <text x="0" y="55%"  fill="#ffffff"  font-weight="500" font-size="24" >Создать</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" offset-lg-3 col-lg-6 offset-lg-3 col-12">
+            <h5>выберите категорию для груза</h5>
+            <div class="div_container">
+            <div class="square_box">
+                <div id="request_small" class="square">S</div>
+                <p class="p">Small до 500 кг</p>
+            </div>
+            <div class="square_box">
+                <div id="request_medium" class="square">M</div>
+                <p class="p">Medium до 5 тонн</p>
+            </div>
+            <div class="square_box">
+                <div id="request_large" class="square" >L</div>
+                <p class="p">Large свыше 5 тонн</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="container">
+    <div class="row rowRequest">
+        <div class="col-12 request_box">
+            <div class="calendar">
+                <table id="calendar2" >
+                    <thead>
+                    <tr><td class="color_grey">&#706;<td colspan="5" id="year_month"><td class="color_grey">&#707;
+                    <tr class="borders"><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td class="colors">Сб<td class="colors">Вс
+                    <tbody>
+                </table>
+            </div>
+            <div class="input_group">
+                <select name="text" id="type" class="input_style">
+                    <option selected>Тип груза</option>
+                </select>
+                <label class="label_style" for="type">Выберите из списка подходящий тип</label>
+                <input name="text" id="opus" class="input_style" placeholder="Краткое описание">
+                <label class="label_style" for="opus">Что именно перевести (стол, стул, продукты, животные)</label>
+                <input name="text" id="time" class="input_style" placeholder="Время загрузки">
+                <label class="label_style" for="time">Укажите с расчетом +/- 15 минут время ожидания</label>
+                <input name="text" id="netto" class="input_style" placeholder="Вес груза">
+                <label class="label_style" for="netto">Приблизительно</label>
+                <input name="text" id="volume" class="input_style" placeholder="Объем">
+                <label class="label_style" for="volume">Приблизительно</label>
+            </div>
+        </div>
+        <div class="col-12 request_box2">
+            <p class="header">Место загрузки</p>
+            <div class="request_address">
+                <div>
+                    <input name="text"  class="input_style town" placeholder="Введите город*"><br>
+                    <label class="label_style">Напишите  город, или выберите его из списка</label>
+                </div>
+                <div>
+                    <input name="text" class="input_style street" placeholder="Введите улицу*"><br>
+                    <label class="label_style" >Укажите улицу, или выберите ее из списка</label>
+                </div>
+                <div>
+                    <input name="text"  class="input_style nmb" placeholder="№*"><br>
+                    <label class="label_style" >№ дома</label>
+                </div>
+                <div class="input_hide"></div>
+            </div>
+            <div>
+                <button class="btn_add">+</button>
+                <span>Добавить второй адрес загрузки</span>
+            </div>
+
+            <p class="header">Место назначения</p>
+            <div class="request_address">
+                <div>
+                    <input name="text" class="input_style town" placeholder="Введите город*"><br>
+                    <label class="label_style" >Напишите  город, или выберите его из списка</label>
+                </div>
+                <div>
+                    <input name="text"  class="input_style street" placeholder="Введите улицу*"><br>
+                    <label class="label_style" >Укажите улицу, или выберите ее из списка</label>
+                </div>
+                <div>
+                    <input name="text" class="input_style nmb" placeholder="№*"><br>
+                    <label class="label_style" >№ дома</label>
+                </div>
+                <div class="input_hide"></div>
+            </div>
+            <div>
+                <button class="btn_add">+</button>
+                <span>Добавить второй адрес загрузки</span>
+            </div>
+            <p class="header">Дополнительно</p>
+            <div class="request_address">
+                <div>
+                    <span>Нужны ли Вам грузчики?</span> <input type="radio" id="yes"><label for="yes"да</label><input type="radio"><label for=""></label>
+                    <span>Есть ли в доме лифт?</span> <input type="radio"><label for=""></label><input type="radio"><label for=""></label>
+                    <span>Нужен ли счет оплаты?</span> <input type="radio"><label for=""></label><input type="radio"><label for=""></label>
+                </div>
+                <div></div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <div class="col-12 request_box2">
+
+
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="container-fluid">
+    <div class=" row rowMailTo">
+        <div class="offset-lg-1 col-lg-10 offset-lg-1 offset-sm-1 col-sm-10 offset-sm-1 offset-md-1 col-md-10 offset-md-1 offset-1 col-10 offset-1 colMailTo">
+            <div class="mailToLogo">
+                <span>хотите получать  рассылку грузов?</span>
+                <img src="img/vektor.png" alt="logotype вектор">
+            </div>
+            <form action="">
+                <input type="email" placeholder="Email"><br>
+                <span>Периодичность и тип рассылки определяется администрацией сайта и может быть изменена/отключена</span>
+
+            </form>
+            <button name="mailto" class="btnView">Подписаться</button>
+        </div>
+    </div>
+
+    <div class="row rowFooter">
+        <div class="offset-1 col-10 offset-1 colFooter">
+            <div class="footerItems">
+                <h6>о нас</h6>
+                <span>Мы предоставляем Вам удобный онлай-сервис для организации грузоперевозок в новом формате "<b>Отправитель - Перевозчик</b>",без посредников.</span>
+            </div>
+            <div class="footerItems">
+                <h6>как начать?</h6>
+                <span>Просто создайте заявку с грузом на перевозку и вам тут же будет поступать самые выгодные цены от грузоперевозчиков.</span>
+                <br><button name="mailto" class="btnView">Разместить груз</button>
+            </div>
+            <div class="footerItems">
+                <h6>меню</h6>
+                <ul>
+                    <li><a class="settingLink" href="delivery.html">Перевозчики</a></li>
+                    <li><a class="settingLink" href="">Заказы</a></li>
+                    <li><a class="settingLink" href="index.php#work">Как это работает?</a></li>
+                    <li><a class="settingLink" href="index.php#qwert">Тарифы</a></li>
+                    <li><a class="settingLink" href="">Правила</a></li>
+                </ul>
+            </div>
+            <div class="footerItems">
+                <h6>информация</h6>
+                <ul>
+                    <li><a class="settingLink" href="index.php#info">О нас</a></li>
+                    <li><a class="settingLink" href="index.php#news">Новости</a></li>
+                    <li><a class="settingLink" href="#">Контакты</a></li>
+                </ul>
+                <ul class ="langList">
+                    <li class="langItem"><a href="">Rus </a>&#149;</li>
+                    <li class="langItem"><a href="">Eng </a>&#149;</li>
+                    <li class="langItem"><a href="">He </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row rowBasement">
+        <div  class="col-12 colBasement">
+            <p>&#169; <img src="img/vektor.png" alt="" width="50px" height="20px"></p>
+            <p> все права защищены</p>
+
+            <span>+380965902357</span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>

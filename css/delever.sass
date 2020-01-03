@@ -1,0 +1,812 @@
+@mixin background ($imgpath, $position: center, $size: 30%, $repeat: no-repeat )
+	  background-image: url($imgpath) 
+	  background-position: $position
+	  background-repeat: $repeat
+	  background-size: $size
+
+$links_color: #5495d5	  
+      
+body
+	background-color: #303030
+
+.label
+	color: #c0c0c0
+.clear
+	clear: both
+
+.link
+	font-size: 0.7em
+	color: $links_color
+	text-transform: lowercase
+
+.clientData
+	color: #fefefe
+	position: relative
+	.clientDataOnlineStatus
+		margin: 0 0 1em 0
+
+		span:nth-child(1)
+			@include background ('../img/icons/green-dot.svg', center, 50%)
+			width: 1em
+			height: 0.7em
+			display: inline-block
+		.clientEdit
+			@include background ('../img/icons/edit.svg', center, 30%)
+			
+			height: 2em
+			display: inline-block
+
+
+	.clientDataLabel
+		color: #767676
+		font-size: 0.7em
+		word-spacing: normal
+
+
+	.clientDataFitures
+		padding-left: 0
+		div
+			margin-bottom: 0.4em
+		.card_inscription
+			font-size: 0.85em
+		.clientPhoneVisibility 
+			@include background ('../img/icons/hide.svg', center, 40%)
+			
+		.clientEmail 
+		  	@include background ('../img/icons/contact.svg', center, 40%)
+	.clientPhoto 
+		max-height: 200px
+		max-width: 200px
+		min-width: 200px
+		img
+			height: 100%
+			width: 100%
+	  		
+			
+		@include background ('../img/icons/photo-camera.svg', center, 6em)
+	.clientDataLanguages
+		align-items: baseline
+		margin-top: 0.75em
+		.clientDataLabel
+		ul	
+			margin: 0
+			padding: 0
+			li
+				margin-right: 0.25em
+				display: inline-block
+				&:not(:first-child)
+					&::before
+						content: '\B7'
+						margin-right: 0.25em
+	.clientDataReview
+		align-items: baseline
+		margin-top: 0.75em
+		.positivReview
+			color: #41f0ad
+		.negativeReview
+			color: #f8705a
+	.clientDataAboutClient
+		margin-top: 0.75em
+		font-size: 0.8em
+	.clientDataIcons
+		.socialIcons
+			height: 3em
+		.socialIcons:nth-child(1)
+				@include background ('../img/icons/skype.svg', center, 50%)				
+		.socialIcons:nth-child(2)
+				@include background ('../img/icons/whatsapp.svg', center, 50%)		
+		.socialIcons:nth-child(3)
+				@include background ('../img/icons/facebook.svg', center, 50%)	
+		.socialIcons:nth-child(4)
+				@include background ('../img/icons/instagram.svg', center, 50%)		
+		.socialIcons:nth-child(5)
+				@include background ('../img/icons/viber.svg', center, 50%)
+		.paySistem
+			height: 3em
+		.paySistem:nth-child(6)
+			    @include background ('../img/icons/paypal.svg', center, 50%)
+		.paySistem:nth-child(7)
+				@include background ('../img/icons/visa.svg', center, 50%)
+		.paySistem:nth-child(8)
+				@include background ('../img/icons/mastercard.svg', center, 50%)
+
+	.clientDataGraphic
+		margin-bottom: 2em
+
+	.clientDataStatistic
+		margin-top: 1.25em
+		h3
+			font-size: 1em
+			line-height: 2em
+			text-transform: uppercase
+			text-align: center
+		.clientDataStatisticOpen
+			color: blue
+		.clientDataStatisticOpen, 
+		.clientDataStatisticCloses
+			font-size: 5em
+		div:nth-child(3)
+			font-size: 1em
+			color: #767676
+	
+
+
+	.deleverStatistic
+		.deleverStatisticRootLength,
+		.deleverStatisticCompletedOrder,
+		.deleverStatisticCarPark
+			height: 10px
+			background: linear-gradient(#c9c9c9, #c9c9c9);
+			background-size: 100% 1px;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			position: relative
+			margin: 2.5em 0 2.5em 0
+			> span:nth-child(1)
+				display: block
+				height: 1px
+				width: 50%
+				border: 0
+				background-color: #5394d6
+				box-shadow: 0 0 10px rgba(83,148,214,0.75);
+				position: absolute
+				left: 0
+				top: 48%
+			span:nth-child(2)
+				display: block
+				height: 0.5em
+				width: 0.5em
+				border: 1px solid #5394d6
+				border-radius: 50%
+				background-color: #5394d6
+				box-shadow: 0 0 15px rgba(250,250,250,0.8);
+				position: absolute
+				left: 50%
+			span:nth-child(3)
+				display: block
+				height: 1em
+				position: absolute
+				left: 15%
+				top: -1.5em
+				color: #c0c0c0
+				font-size: 0.7em
+			span:nth-child(4)
+				display: block
+				height: 1em
+				width: 1em
+				position: absolute
+				left: 75%
+				top: -1.25em
+				color: #5394d6
+				font-size: 1.25em
+		.deleverStatisticRootLength
+
+
+		.deleverStatisticCompletedOrder,
+		.deleverStatisticCarPark
+		button
+			color: #c0c0c0
+			font-size: 1em
+			border: 2px solid #f66f59
+			border-radius: 1.25em
+			background-color: transparent
+			padding: 0.3em 1em 0.3em 1em
+
+		button.choise
+			margin-right: 1em
+			float: right
+
+	.deleverTarifTimer
+		min-width: 16em
+		margin-top: 2em 
+		background-color: transparent
+		border: 1px solid #c0c0c0
+		border-radius: 0.7em
+		legend
+			padding: 0 1em 0 1em
+			margin: 0 auto
+			width: auto
+			text-transform: uppercase
+			font-size: 0.9em
+		button.extend
+			margin: 1.5em auto
+			padding: 0.3em 2em 0.3em 2em
+			display: block
+		.deleverTarifTimerType
+			color: #f5eb68
+			font-size: 0.9em
+			text-align: center	
+			margin-bottom: 1.5em 
+			margin-top: 0.5em
+		.deleverTarifTimerCounter
+			display: flex
+			justify-content: center
+			> div
+				margin: 0 0.2em
+			.timerNambers
+				font-size: 2em
+				line-height: 1em
+			.timerLables
+				font-size: 0.4em
+				text-align: center
+		.separator
+			display: flex
+			align-items: center
+			padding: 0
+			
+
+
+	.formPrivateData           
+		width: 84%
+		margin-left: 8%
+		box-sizing: border-box 
+		background-color: #303030
+		display: none/flex
+		flex-direction: row
+		flex-wrap: wrap
+		div
+			display: flex
+			flex-direction: column
+		> div:nth-child(-n+2)
+			width: 30%
+			padding-right: 4em
+		> div:nth-child(3)
+			width: 40%
+			padding-right: 4em
+		input[type="submit"]
+			margin-left: auto
+			margin-right: 3.75em
+			margin-bottom: 3.125em
+			background-color: #5494d4
+			font-size: 0.75em
+			line-height: 3.33em
+			padding: 0 1.65em 0 1.65em
+			border: 0
+			border-radius: 1.65em
+			color: #fff
+
+		.formPrivateDateSection,
+		.formPrivateMessageSection,
+		.formPrivatePaySection
+			font-size: 0.8em
+			input
+				width: 100%
+				background-color: transparent
+				border-bottom: 1px solid #4d4d4d
+				border-left: 0
+				border-top: 0
+				border-right: 0
+				font-size: 0.95em
+				height: 2.5em
+				vertical-align: baseline
+				outline: none
+				color: #fff
+			h3
+				font-size: 1.35em
+				margin-bottom: 2.3em
+		.formPrivateMessageSection,
+		.formPrivatePaySection
+			width: 100%
+		.formPrivatePaySection
+			margin: 4em 0 4em 0
+
+
+		.formPrivateNotifications
+			font-size: 0.8em
+			div
+				display: flex
+				flex-direction: row
+				justify-content: start
+				align-items: center
+				margin-bottom: 2em
+				span:nth-child(1)
+					margin-right: auto
+				label
+					text-transform: uppercase
+				input[type="radio"]	
+					margin: 0 1em 0 1em
+					appearance: none
+					width: 1em
+					height: 1em
+					border: 1px solid #c5c5c5
+					border-radius: 50%
+					&:before
+						content: ""
+						width: 100%
+						height: 100%
+						border-radius: 50%
+						display: block
+					&:checked:before
+						background-color: #5490cf
+
+			h3
+				font-size: 1.35em
+				margin-bottom: 3em
+
+
+
+
+
+.deleverInformation	
+	background-color: #fefefe
+	margin-top: 7.2em
+	> h3:nth-of-type(-n+2)
+		margin-top: 3em 
+		margin-bottom: 1.25em
+	.carentOrders,
+	.rejectionOder
+		border: 1px solid #eee
+		box-shadow: 0 0 10px rgba(225,225,225,0.75);
+		position: relative
+		margin-bottom: 3em
+	.carentOrders
+		.root
+			.clientsRequestsOpenTitle
+				.clientsRequestsOpenIcon
+					@include background ('../img/icons/target.svg', right, 1.3em)
+			.clientsRequestsOpenFitures	
+				.clientsRequestsOpenFituresLabel
+					color: #c9c9c9
+					font-size: 0.85em
+				.clientsRequestsOpenFituresTowns
+					color:#222222
+					font-size: 0.85em
+					display: inline-block
+					width: 37%
+					& span
+						display: block
+				.clientsRequestsOpenFituresDate
+					> div
+						width: 2.5em
+						height: 2.5em
+						background-color: #f2f2f2
+						border: 1px solid #e3e3e3
+						border-radius: 2px
+						.clientsRequestsOpenFituresDateNumber
+							font-size: 0.8em
+							text-align: center
+						.clientsRequestsOpenFituresDateDay
+							font-size: 0.5em
+							text-transform: lowercase
+							text-align: center
+			.rootMap
+				.rootMapLocationPoint
+					@include background ('../img/icons/location_point.svg', right, 0.9em)
+				div:nth-child(2)
+					font-size: 0.6em
+					letter-spacing: 0
+			.rootPrice
+				height: 35%
+				margin-top: auto
+				.rootPriceIcon
+					@include background ('../img/icons/price.svg', right top, 0.9em)
+				.rootPriceNumber
+					font-size: 1.25em
+
+		.cargoType
+			& >span:first-child
+				width: 1.25em
+				height: 1.25em
+				display: inline-block
+				@include background ('../img/icons/lorry.svg', center, 100%)	
+
+			.clientsRequestsOpenСargoType
+				color:#222222
+				& >span:first-child
+					width: 1.25em
+					height: 1.25em
+					display: inline-block
+					@include background ('../img/icons/yellow_dot.svg', center, 70%)	
+			
+			.clientsRequestsOpenСargoTypeName
+				color:#222222
+				font-size: 0.85em
+				text-align: center
+
+		.comments
+			position: relative
+			color: #222222
+			p,
+				font-size: 0.85em
+			> div
+				span:first-child
+					width: 1.25em
+					height: 1.25em
+					display: inline-block
+					@include background ('../img/icons/comments.svg', center, 70%)
+			.foolComents
+				width: 80%
+				box-sizing: border-box
+				padding: 1em
+				position: absolute
+				top: 20%
+				left: 10%
+				box-shadow: 0 10px 10px rgba(0,0,0,0.25);
+				background-color: #fff
+				z-index: 10
+				display: none												//comments
+				
+					
+			.deleverAddress
+				height: 35%
+				.deleverAddressIcon
+					width: 1em
+					height: 1em
+					display: inline-block
+					@include background ('../img/icons/root.svg', top left, 100%)
+				div
+					font-size: 0.85em
+					display: inline-block
+				.address
+					margin-left: 1em
+		.rootStatus
+			.label
+				text-align: center
+			.rootStatusLength,
+			.rootStatusDelever
+				height: 10px
+				background: linear-gradient(#c9c9c9, #c9c9c9);
+				background-size: 100% 1px;
+				background-repeat: no-repeat;
+				background-position: center center;
+				position: relative
+				margin: 2.5em 0 2.5em 0
+			.rootStatusLength	
+				span:nth-child(1)
+					display: block
+					height: 1px
+					width: 50%
+					border: 0 solid #5394d6
+					background-color: #5394d6
+					box-shadow: 0 0 5px rgba(83,148,214,0.5);
+					position: absolute
+					left: 0
+					top: 50%
+				span:nth-child(2)
+					display: block
+					height: 0.5em
+					width: 0.5em
+					border: 1px solid #5394d6
+					border-radius: 50%
+					background-color: #5394d6
+					box-shadow: 0 0 5px rgba(83,148,214,0.5);
+					position: absolute
+					left: 50%
+				span:nth-child(3)
+					display: block
+					height: 1em
+					
+					position: absolute
+					left: 15%
+					top: -1.5em
+					color: #303030
+					font-size: 0.7em
+				span:nth-child(4)
+					display: block
+					height: 1em
+					width: 1em
+					position: absolute
+					left: 75%
+					top: -1.25em
+					color: #5394d6
+
+			.rootStatusDelever
+				span:nth-child(1)
+					display: block
+					height: 1px
+					width: 10%
+					border: 0 solid #5394d6
+					background-color: #5394d6
+					box-shadow: 0 0 5px rgba(83,148,214,0.5);
+					position: absolute
+					left: 0
+					top: 50%
+				span:nth-child(2)
+					display: block
+					height: 0.5em
+					width: 0.5em
+					border: 1px solid #5394d6
+					border-radius: 50%
+					background-color: #5394d6
+					box-shadow: 0 0 5px rgba(83,148,214,0.5);
+					position: absolute
+					left: 10%
+				span:nth-child(3)
+					display: block
+					height: 1em
+					width: 1em
+					position: absolute
+					left: 75%
+					top: -1.25em
+					color: #5394d6
+		.carentOrdersButton
+			font-size: 0.85em
+			padding: 0.8em 1.25em 
+			color: #fff
+			border-radius: 1.425em
+			border: 0
+			background-color: #5495d5
+			position: absolute
+			top: 112%
+			right: 3%
+
+	.rejectionOder
+		position: relative
+		form
+			> div:first-child
+				padding-bottom: 2em
+		h3
+			text-transform: uppercase
+			font-size: 1em
+			margin-top: 1.5em 
+			margin-bottom: 1.25em 
+			
+		.reasons,
+		.descriptions
+			display: flex
+			flex-direction: column
+			
+		.reasons
+			align-items: flex-end
+			div:first-child
+				margin-top: auto
+			div
+				margin: 0.5em 0
+				label 
+					text-transform: uppercase
+					font-size: 0.85em
+					color: #c5c5c5
+					input[type="radio"]
+						vertical-align: middle
+						appearance: none
+						width: 1em
+						height: 1em
+						border: 1px solid #c5c5c5
+						border-radius: 50%
+						&:before
+							content: ""
+							width: 100%
+							height: 100%
+							border-radius: 50%
+							display: block
+
+						&:checked:before
+							background-color: #5490cf
+		.descriptions
+			div
+				p
+					margin-top: 1.5em
+			align-items: center
+			color: #c5c5c5
+			textarea
+				width: 90%
+				border: 1px solid #c5c5c5
+				margin-top: auto
+				padding-left: 1em
+				resize: none
+
+
+
+
+
+		.rejectionOderSubmit
+			font-size: 0.85em
+			padding: 0.8em 1.25em 
+			color: #fff
+			border-radius: 1.425em
+			border: 0
+			background-color: #5495d5
+			position: absolute
+			top: 112%
+			right: 3%
+
+
+
+
+
+	.carPark
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-around
+		.carParkItem
+			display: flex
+			width: 260px
+			height: 360px
+			flex-direction: column
+			border: 1px solid #C0C0C0
+			font-size: 0.7em
+			margin-bottom: 2em
+			img
+				width: 100%
+				height: 175px
+				border: none
+				margin-bottom: 1em
+			.carParkItemTitle
+				text-align: center
+				background: linear-gradient(#c9c9c9, #c9c9c9)
+				background-size: 80% 1px
+				background-repeat: no-repeat
+				background-position: bottom
+				margin-bottom: 1em
+				div
+					font-size: 0.7em
+					margin-bottom: 0.75em
+				h3
+					font-size: 1.25em
+
+			.carParkItemFitures
+				font-size: 0.6em
+				div
+					margin: 0
+					padding: 0
+				> div:first-child,
+				h3
+					text-align: center
+				> div:nth-child(3)
+					margin-left: auto
+					text-align: end
+					padding-right: 1em
+					> div:nth-child(2)
+						text-transform: uppercase
+
+	nav
+		margin: 2.8em 0 6em
+		ul
+			justify-content: center
+			.back
+				width: 1.25em
+				height: 1.25em
+				display: inline-block
+				@include background ('../img/icons/back.svg', center, 80%)
+			.next
+				width: 1.25em
+				height: 1.25em
+				display: inline-block
+				@include background ('../img/icons/next.svg', center, 80%)
+			.page-link
+				border: 0
+				&:hover
+					border-bottom: 2px solid #5494d4
+					border-radius: 0
+	.clientsRequestsReviews
+		margin: 5em 0 3em 0
+		padding-left: 6.56em
+		list-style: none			
+		li
+			margin-right: 0.15em
+			display: inline-block
+			&:not(:first-child)
+				&::before
+					content: '\B7'
+					margin-right: 0.15em
+		.clientsRequestsReviewsAll
+			font-size: 1em
+		.clientsRequestsReviewsPositive
+			font-size: 0.75em
+			span:nth-child(1)
+				color: #02dc30
+			span:nth-child(2)
+				color: #c0c0c0
+		.clientsRequestsReviewsNegative
+			font-size: 0.75em
+			span:nth-child(1)
+				color: #f88777
+			span:nth-child(2)
+				color: #c0c0c0
+	.clientsRequestsStory
+		text-align: justify
+		padding: 2em 6.56em
+	.clientsRequestsSlogan,
+	.clientsRequestsLocation
+		text-align: center
+		
+
+@media (min-width: 1600px)
+	.cargoType
+		.clientsRequestsOpenСargoTypeName	
+			text-align: start
+
+@media (min-width: 1200px)
+	body
+		font-size: 1.1em
+		.reasons
+		div
+			label 
+				margin-left: 1.5em
+				margin-right: 1em
+				input[type="radio"]
+					margin: 0 1em 
+
+
+@media (min-width: 1300px)
+	body
+		font-size: 1.2em
+
+
+@media (max-width: 1200px) 
+	.reasons
+		div
+			label 
+				margin-left: 0.5em
+				margin-right: 0.5em
+				input[type="radio"]
+					margin: 0 0.5em 
+
+
+
+
+
+@media (min-width: 991.6px)
+	.root,
+	.cargoType,
+	.comments
+		background: linear-gradient(#c9c9c9, #c9c9c9);
+		background-size: 1px 70%;
+		background-repeat: no-repeat;
+		background-position: 99% center;
+	.deleverInformation	
+		> h3:nth-of-type(-n+2)
+			margin-left: 3em
+		
+
+
+
+@media (max-width: 991.5px)
+
+	body
+		font-size: 1.2em
+		.deleverInformation	
+			> h3:nth-of-type(-n+2)
+				margin-left: 0
+				text-align: center
+				
+
+			.carentOrders,
+			.rejectionOder
+				border: 1px solid #eee
+				box-shadow: 0 0 10px rgba(225,225,225,0.75);
+				position: relative
+				margin-bottom: 3em
+				.reasons
+					align-items: center
+			.carentOrders
+				.root,
+				.cargoType,
+				.comments
+					border-bottom: 1px solid #c9c9c9
+				.root
+					align-items: center
+					
+					.clientsRequestsOpenFitures	
+						width: 50%
+						margin: 0
+
+						.clientsRequestsOpenFituresLabel
+							width: 30%
+							div 
+								display: inline-block
+						.clientsRequestsOpenFituresTowns
+							
+						.clientsRequestsOpenFituresDate
+					.rootPrice
+						width: 50%	
+						height: 100%
+						margin: 0
+						flex-wrap: nowrap
+						
+
+
+				.cargoType
+					text-align: center
+					.clientsRequestsOpenСargoTypeName
+						color:#222222
+						font-size: 1em
+
+			
+
+@media (max-width: 767.5px)
+
+	body
+		font-size: 1.0em
+

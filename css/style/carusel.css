@@ -1,0 +1,43 @@
+#newOrdersCarousel{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    margin-bottom: 50px;
+}
+.control_btn{
+    position: absolute;
+    bottom: 0;
+    left:48%;
+}
+ .control_btn__btn{
+
+    background: transparent;
+    border: none;
+     outline: none;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+     font-size: 1.5em;
+     font-weight: bold;
+     color:#57CFE8;
+}
+.control_btn__btn:focus{
+    outline: none;
+}
+.containerCarusel{
+width: 3000px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.viewArea{
+    margin: 0 auto;
+    width: 63%;
+    overflow: hidden;
+}
+.clean{
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}

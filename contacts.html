@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ВЕКТОР/контакты</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cach">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script defer src="libs/jquery/jquery-3.4.1.min.js"></script>
+    <script defer src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script defer src="js/navbarMenu.js"></script>
+    <script defer src="js/up.js"></script>
+    <script defer src="js/contacts.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css">
+    <link rel="stylesheet" href="css/style/navbarMenu.css">
+    <link rel="stylesheet" href="css/media/navbarMenu.css">
+    <link rel="stylesheet" href="css/media/media.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style/up.css">
+    <link rel="stylesheet" href="css/style/contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+
+
+<body>
+        <a id="button" class="vis"></a>
+        <div class="container-fluid" id="container_fluid">
+            <div class="row rowNavbar">
+                <div class="offset-1 col-11 ">
+                    <nav class="navbarMenu">
+                        <a class="" href="index.php"><img src="img/vektor.png" alt="" width="130" height="50"></a>
+                        <button class="burger"></button>
+                        <ul class="menuList" id="menuList">
+                            <li><a class="" href="index.php">Главная</a></li>
+                            <li><a class="" href="delivery.html ">Перевозчики</a></li>
+                            <li><a class="" href="#">Заказчики</a></li>
+                            <li class="dropdownMenu"><a class="" href="#">Сервис &#8594;</a>
+                                <ul class="dropdownItem" >
+                                    <li><a href="index.php#info">О нас</a></li>
+                                    <li><a href="index.php#work">Как это работает?</a></li>
+                                    <li><a href="index.php#news">Новости</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="" href="index.php#qwert">Тарифы</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row rowSvg">
+                <div class="offset-2 col-10 AboutSvg">
+                    <div class="AboutsvgItem">
+                        <svg width="220" height="100">
+                            <line x1="50%" y1="0" x2="50%" y2="100" stroke="#57CFE8" stroke-width="5" />
+                        </svg>
+                        <br>
+                        <svg width="220" height="98" fill="#57CFE8">
+                            <circle r="29%" cx="50%"cy="50%" />
+                            <text x="5%" y="60%"  fill="#ffffff" font-family="Verdana, serif" font-weight="500" font-size="36">Контакты</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row rowMap">
+                <div class="map" id="map">
+                    <img src="img/Oblasti.gif" alt="" usemap="#imgmap20191119231656">
+                        <map id="imgmap20191119231656" name="imgmap20191119231656">
+                            <area id="volyn_region" shape="circle" alt="Волынская область" title="" coords="122,71,48" href="" target=""  />
+                            <area id="zhytomyr_region" shape="circle" alt="Житомирская область" title="" coords="276,105,50" href="#" target=""/>
+                            <area  id="roven_region" shape="rect" alt="Ровенская область" title="" coords="172,38,221,125" href="#" target="" />
+                            <area id="lvov_region" shape="circle" alt="Львовская область" title="" coords="76,160,40" href="#" target="" />
+                            <area id="transcarpathian_region" shape="circle" alt="Закарпатская область" title="" coords="47,245,35" href="#" target="" />
+                            <area id="ivano-frankivsk_region" shape="circle" alt="Ивано-Франковская область" title="" coords="111,224,33" href="#" target="" />
+                            <area id="ternopil_region" shape="circle" alt="Тернопольская область" title="" coords="153,178,34" href="#" target="" />
+                            <area id="khmelnisk_region" shape="circle" alt="Хмельницкая область" title="" coords="220,169,36" href="#" target="" />
+                            <area id="chernivtsi_region" shape="rect" alt="Черновицкая область" title="" coords="125,225,239,263" href="#" target="" />
+                            <area id="vinnitsa_region" shape="circle" alt="винницкая область" title="" coords="289,205,51" href="#" target="" />
+                            <area id="kyiv_region" shape="circle" alt="киевская область" title="" coords="370,126,48" href="#" target="" />
+                            <area id="chernigov_region" shape="circle" alt="черниговская область" title="" coords="436,60,46" href="#" target="" />
+                            <area id="sumy_region" shape="circle" alt="сумская область" title="" coords="534,85,40" href="#" target="" />
+                            <area id="poltava_region" shape="circle" alt="полтавская область" title="" coords="515,161,40" href="#" target="" />
+                            <area id="kharkov_region" shape="circle" alt="харьковская область" title="" coords="634,164,42" href="#" target="" />
+                            <area id="cherkassy_region" shape="rect" alt="черкасская область" title="" coords="348,182,445,210" href="#" target="" />
+                            <area id="kirovograd_region" shape="rect" alt="кировоградская область" title="" coords="377,220,503,254" href="#" target="" />
+                            <area id="dnepr_region" shape="rect" alt="днепропетровская область" title="" coords="516,215,635,272" href="#" target="" />
+                            <area id="nikolaiv_region" shape="circle" alt="николаевская область" title="" coords="434,297,39" href="#" target="" />
+                            <area id="odessa_region" shape="rect" alt="одесская область" title="" coords="309,257,395,402" href="#" target="" />
+                            <area id="zaporoze_region" shape="circle" alt="запорожская область" title="" coords="595,322,47" href="#" target="" />
+                            <area id="luganck_region" shape="circle" alt="луганская область" title="" coords="745,202,43" href="#" target="" />
+                            <area id="donetsk_region" shape="circle" alt="донецкая область" title="" coords="686,260,46" href="#" target="" />
+                            <area id="kherson_region" shape="circle" alt="херсонская область" title="" coords="504,348,46" href="#" target="" />
+                            <!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) -->
+                        </map>
+
+                    <div id="div_outer">
+                        <div id="div_top">
+                            <img src="img/icon/placeholder.png" alt=""> <span></span><br>
+                            <img src="img/icon/mail-black.png" alt=""> <span></span><br>
+                            <img src="img/icon/phone-call.png" alt=""> <span></span><br>
+                            <img src="img/icon/earth-globe.png" alt=""> <span></span>
+                        </div>
+                        <div id="div_bottom">
+                            <h4>Начать диалог</h4>
+                            <p id="p_first">&#8195;По работе сайта</p>
+                            <p>&#8195;По вопросам доставки</p>
+                            <p>&#8195;По вопросам сотрудничества</p>
+                        </div>
+                    </div>
+                    <div class="loader">
+                        <div class="circle"></div>
+                        <div class="circle"> </div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row rowContainer" oncopy>
+                <div class="offset-lg-3 col-lg-6 offset-lg-3 col-12" id="container">
+                    <div class="containerFirst">
+                        <h2> о нас</h2>
+                        <p><img src="img/vektor.png" alt="" width="90px" height="40px"> - это удобный, открытый онлайн-сервис, представляющий Вам организацию грузоперевозок в совершенно новом формате "отправитель" - "перевозочик", без посредников и лишних затрат.</p>
+                        <p><b>Грузоотправители</b> - бесплатно размещают заявки на грузоперевозку или подвозку и ожидают лучшего предложения от перевозчика.</p>
+                        <p><b>Грузоперевозчики</b> - после покупки тарифного плана имеют полный доступ ко всей информации о грузе и отправителе, а также получают мгновенные уведомления о новых заявках.</p>
+                    </div>
+                    <div class="containerSecond">
+                        <h2>наши +</h2>
+                        <ul>
+                            <li>Расчет расстояний между адресом загрузки и выгрузки, а также  показ маршрута на карте;</li>
+                            <li>Возможность добавить несколько адресов для загрузки или выгрузки;</li>
+                            <li>Обмен актуальной и контактной информацией происходит в закрытом режиме через личные сообщения;</li>
+                            <li>Мгновенные сообщения между пользователями и уведомления;</li>
+                            <li>Среди грузоперевозчиков проводятся торги по каждой заявке;</li>
+                            <li>Наглядная статистика выполненных и размещенных заявок.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="row rowFooter">
+                <div class="offset-1 col-10 offset-1 colFooter">
+                    <div class="footerItems">
+                        <h6>о нас</h6>
+                        <span>Мы предоставляем Вам удобный онлай-сервис для организации грузоперевозок в новом формате "<b>Отправитель - Перевозчик</b>",без посредников.</span>
+                    </div>
+                    <div class="footerItems">
+                        <h6>как начать?</h6>
+                        <span>Просто создайте заявку с грузом на перевозку и вам тут же будет поступать самые выгодные цены от грузоперевозчиков.</span>
+                        <br><button name="mailto" class="btnView">Разместить груз</button>
+                    </div>
+                    <div class="footerItems">
+                        <h6>меню</h6>
+                        <ul>
+                            <li><a class="settingLink" href="delivery.html">Перевозчики</a></li>
+                            <li><a class="settingLink" href="">Заказы</a></li>
+                            <li><a class="settingLink" href="index.php#work">Как это работает?</a></li>
+                            <li><a class="settingLink" href="index.php#qwert">Тарифы</a></li>
+                            <li><a class="settingLink" href="">Правила</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerItems">
+                        <h6>информация</h6>
+                        <ul>
+                            <li><a class="settingLink" href="index.php#info">О нас</a></li>
+                            <li><a class="settingLink" href="index.php#news">Новости</a></li>
+                            <li><a class="settingLink" href="#">Контакты</a></li>
+                        </ul>
+                        <ul class ="langList">
+                            <li class="langItem"><a href="">Rus </a>&#149;</li>
+                            <li class="langItem"><a href="">Eng </a>&#149;</li>
+                            <li class="langItem"><a href="">He </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row rowBasement">
+                <div  class="col-12 colBasement">
+                    <p>&#169; <img src="img/vektor.png" alt="" width="50px" height="20px"></p>
+                    <p> все права защищены</p>
+
+                    <span>+380965902357</span>
+                </div>
+            </div>
+
+
+        </div>
+</body>
+</html>

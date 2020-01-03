@@ -1,0 +1,131 @@
+<?php  session_start(); ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Вход Регистрация</title>
+	
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script defer src="libs/jquery/jquery-3.4.1.min.js"></script>
+	<script defer src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+	<script defer src="libs/maskinput.js"></script>
+	<!--<script src="libs/rateit.js-master/scripts/jquery.rateit.min.js"></script><script defer src="js/function.js"></script>
+	-->
+	<script defer src="js/scriptLogin.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style/styleLogin.css">
+	<link rel="stylesheet" type="text/css" href="css/media/mediaLogin.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts/fonts.css">
+
+</head>
+<body>
+	<div class ='container-fluid' id="container">
+		<div class ='row'>
+			<div class='offset-1 col-10 offset-1 rowFormLogIn'>
+				<form action="php/formlog.php"  method="POST" name="formLogin" autocomplete="off">
+					<a  href="index.php"> <div class=' formLogInClose close'> </div></a>
+					<p class="formHead">Вход в аккаунт</p><br>
+					<input class="mail" type="email"  title="" name="mail" placeholder="Email адрес" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" minlength="4" maxlength="30" required><br>
+					<input class="passwrd" name="password" type="password" title="введите пароль(до 15 символов)"  placeholder="Пароль" pattern="\w{4,14}" minlength="4" maxlength="14" required>
+					<label class="textInpRadio" > <input id='inpR' type='radio'> Запомнить меня &#8195;<i id="rememberPassword">Напомнить пароль?</i></label><br>
+					<input class="submitButton" type="submit" value="Войти">
+					<div class='socialNetw'>
+						<span class="socialNetwSpan">Быстрый вход с помощью </span>
+						<div class='socIcon' ><a href="https://uk-ua.facebook.com/public/Fasebook-Facebook"> <img src="img/icon/iconF.png" alt="Facebook" title='Facebook' width='30px' height='30px'> </a></div>
+						<div class='socIcon'><a href="https://accounts.google.com/signin/v2/recoveryidentifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"> <img src="img/icon/iconG.png" alt="google+" title='google+' width='30px' height='30px'></a></div>
+					</div>
+					<input class='btn btn_registration' type="button" value="регистрация">
+					<input class='btn' type="submit" value="войти">
+				</form>
+			</div>
+
+
+			<div class='offset-1 col-10 offset-1 rowFormPasswordReminder'>
+				<form  name="formPassRem" autocomplete="off" novalidate>
+					<a href="#"> <div class='formPassRemClose close'> </div> </a>
+					<p class="formHead">Напомнить пароль</p><br>
+					<span class="span">для повторного получения пароля, введите номер Вашего телефона или  контактный e-mail и нажмите кнопку отправить</span>
+					<div class="formPasRemInputs" id="formPasRemInputs">
+						<input class="mail" type="email"  title="myemail@com.ua"  placeholder="Email адрес" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" minlength="4" maxlength="30" required><br>
+						<input type="tel" class="tel"  placeholder="Телефон" required>
+						<button class="submitButton" id='submitButton'>Отправить</button>
+					</div>
+				</form>
+				<div class="answear"></div>
+			</div>
+
+
+			<div class='offset-1 col-10 offset-1 rowFormUsersRegistration'>
+				<form  name="formUsersReg" autocomplete="off">
+					<a href=""><div class='formUsersRegClose close'></div></a>
+					<p class="formHead">регистрация</p><br>
+					<span class="span">для регистрации на данном сервисе выберите  необходимую категорию и заполните все поля формы </span><br>
+					<div><input type='radio' id="inpRadioSender"><label class="label" for="inpRadioSender"> грузоотправитель </label></div>
+					<div><input type='radio' id="inpRadioDelivery"><label class="label" for="inpRadioDelivery">грузоперевозчик</label></div>
+				</form>
+			</div>
+
+
+			<div class='offset-1 col-10 offset-1 rowFormSenderRegistration'>
+				<form action="php/formsendreg.php" method="POST" name="formSendReg" autocomplete="off">
+					<a href="#"> <div class='formSenderClose close'> </div></a><br>
+					<p class="formHead">Регистрация отправителя</p><br>
+					<div class="divI">
+						<input type="text" name="name" placeholder="Имя"required>
+						<input type="text" name="username" placeholder="Псевдоним"required>
+					</div>
+					<input type="email" class="mail" name="mail"  placeholder="Email адрес"pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" minlength="4" maxlength="30" required><br>
+					<input type="password" class="passwrd" name="password" placeholder="Пароль (до 15 символов)"pattern="\w{4,14}" minlength="4" maxlength="14" required>
+					<label class="textInpRadio"> <input type='radio'required checked> <b> Я согласен (а) с</b>  &#8195; <i><a href="#">Условиями сервиса</a></i>  </label><br>
+					<input class="submitButton" type="submit" value="Регистрация">
+					<div class="hidden"></div>
+					<input class='btn btn_registration_sender' type="button" value="регистрация">
+					<input class='btn' id="btnLogin" type="button" value="войти">
+				</form>
+			</div>
+
+
+			<div class='offset-1 col-10 offset-1 rowFormDeliveryRegistration'>
+				<form action="php/formsendreg.php" method="POST" name="formDeliveryReg" autocomplete="off">
+					<a href="#"> <div class='formDeliveryClose close'> </div></a><br>
+					<p class="formHead">Регистрация перевозчика</p><br>
+					<div id="divDelivery">
+						<input class="username" type="text"  placeholder="Псевдоним" required>
+						<input class="compani" type="text"  placeholder="Компания"required>
+					</div>
+					<input type="email"  class="mail" placeholder="Email адрес"pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" minlength="4" maxlength="30" required><br>
+					<div id="divDelivery2">
+						<input class="tel" type="tel"  placeholder="Телефон" pattern="\d{10}" required>
+						<input class="pass" type="password"  placeholder="Пароль"pattern="\w{4,14}" minlength="4" maxlength="14" required>
+					</div>
+					<div class="dropdown">
+						<span id="dropdownSpan">Тарифный план</span>
+						<label for="chec"> <input id='chec' type="checkbox"> <span></span>
+							<ul class="dropdown-content" >
+								<li><a href="#"><p class="small">Small<b class="bSmall">$99</b></p>
+									<em>подвозка людей и перевозка мелких грузов<br></em>
+									<em>до 500кг</em>
+								</a></li>
+								<li><a href="#"><p class="medium">Medium<b class="bMedium">$299</b> </p><em>перевозка средних грузов <br></em> <em>до 5т </em></a></li>
+								<li><a href="#"><p class="large">Large<b class="bLarge">$899</b></p> <em>перевозка габаритных грузов </em><br><em>свыше 5т</em> </a></li>
+							</ul>
+                        </label>
+					</div>
+					<label class="textInpRadio"> <input type='radio' name='remember' value='rem' checked> <b> Я согласен (а) с</b>  &#8195; <i><a href="#">Условиями сервиса</a></i>  </label><br>
+					<input class="submitButton" type="submit" value="Регистрация">
+					<div class="hidden"></div>
+					<input class='btn btn_registration_delivery' value="регистрация" type="button">
+					<input class='btn' id="btnLogin2" type="button" value="войти">
+				</form>
+			</div>
+
+
+
+		</div>
+	</div>
+ 
+</body>
+</html>

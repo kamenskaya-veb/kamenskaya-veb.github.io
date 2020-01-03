@@ -1,0 +1,598 @@
+
+@mixin background ($imgpath, $position: center, $size: 30%, $repeat: no-repeat )
+	  background-image: url($imgpath) 
+	  background-position: $position
+	  background-repeat: $repeat
+	  background-size: $size
+
+$links_color: #5495d5	  
+      
+body
+	background-color: #303030
+	
+h3
+	font-size: 100%
+
+.link
+	text-size: 0.7em
+	color: $links_color
+	text-transform: lowercase
+
+.break
+	flex-basis: 100%
+	height: 0
+
+.iconHammer
+	width: 1.25em
+	height: 1.25em
+	display: inline
+	@include background ('../img/icons/hammer.svg', center, 70%)
+	display: inline-block
+.iconEye
+	width: 1.25em
+	height: 1.25em
+	display: inline
+	@include background ('../img/icons/eye.svg', center, 70%)
+	display: inline-block
+#map
+	height: 300px
+	width: 100%
+.clientData
+	color: #fefefe
+	position: relative
+	.clientDataOnlineStatus
+		margin: 0 0 1em 0
+
+		span:nth-child(1)
+			@include background ('../img/icons/green-dot.svg', center, 50%)
+			width: 1em
+			height: 0.7em
+			display: inline-block
+		.clientEdit
+			@include background ('../img/icons/edit.svg', center, 30%)
+			
+			height: 2em
+			display: inline-block
+
+
+	.clientDataLabel
+		color: #767676
+		font-size: 0.7em
+		word-spacing: normal
+
+
+	.clientDataFitures
+		padding-left: 0
+		div
+			margin-bottom: 0.4em
+		.card_inscription
+			font-size: 0.85em
+		.clientPhoneVisibility 
+			@include background ('../img/icons/hide.svg', center, 40%)
+			
+		.clientEmail 
+		  	@include background ('../img/icons/contact.svg', center, 40%)
+	.clientPhoto 
+		max-height: 200px
+		max-width: 200px
+		min-width: 200px
+		img
+			height: 100%
+			width: 100%
+	  		
+			
+		@include background ('../img/icons/photo-camera.svg', center, 6em)
+	.clientDataLanguages
+		align-items: baseline
+		margin-top: 0.75em
+		.clientDataLabel
+		ul	
+			margin: 0
+			padding: 0
+			li
+				margin-right: 0.25em
+				display: inline-block
+				&:not(:first-child)
+					&::before
+						content: '\B7'
+						margin-right: 0.25em
+	.clientDataReview
+		align-items: baseline
+		margin-top: 0.75em
+		.positivReview
+			color: #41f0ad
+		.negativeReview
+			color: #f8705a
+	.clientDataAboutClient
+		margin-top: 0.75em
+		font-size: 0.8em
+	.clientDataIcons
+		.socialIcons
+			height: 3em
+		.socialIcons:nth-child(1)
+				@include background ('../img/icons/skype.svg', center, 50%)				
+		.socialIcons:nth-child(2)
+				@include background ('../img/icons/whatsapp.svg', center, 50%)		
+		.socialIcons:nth-child(3)
+				@include background ('../img/icons/facebook.svg', center, 50%)	
+		.socialIcons:nth-child(4)
+				@include background ('../img/icons/instagram.svg', center, 50%)		
+		.socialIcons:nth-child(5)
+				@include background ('../img/icons/viber.svg', center, 50%)
+		.paySistem
+			height: 3em
+		.paySistem:nth-child(6)
+			    @include background ('../img/icons/paypal.svg', center, 50%)
+		.paySistem:nth-child(7)
+				@include background ('../img/icons/visa.svg', center, 50%)
+		.paySistem:nth-child(8)
+				@include background ('../img/icons/mastercard.svg', center, 50%)
+
+	.clientDataGraphic
+		margin-bottom: 2em
+
+	.clientDataStatistic
+		margin-top: 1.25em
+		h3
+			text-size: 1em
+			line-height: 2em
+			text-transform: uppercase
+			text-align: center
+		.clientDataStatisticOpen
+			color: blue
+		.clientDataStatisticOpen, 
+		.clientDataStatisticCloses
+			font-size: 5em
+		div:nth-child(3)
+			font-sise: 1em
+			color: #767676
+	
+	.formPrivateData           //Form!!!!
+		width: 84%
+		left: 8%
+		box-sizing: border-box 
+		position: absolute
+		background-color: #303030
+		display: none//flex
+		flex-direction: row
+		flex-wrap: wrap
+		z-index: 50
+		div
+			display: flex
+			flex-direction: column
+		> div:nth-child(-n+2)
+			width: 30%
+			padding-right: 4em
+		> div:nth-child(3)
+			width: 40%
+			padding-right: 4em
+		input[type="submit"]
+			margin-left: auto
+			margin-right: 3.75em
+			margin-bottom: 3.125em
+			background-color: #5494d4
+			font-size: 0.75em
+			line-height: 3.33em
+			padding: 0 1.65em 0 1.65em
+			border: 0
+			border-radius: 1.65em
+			color: #fff
+
+		.formPrivateDateSection,
+		.formPrivateMessageSection,
+		.formPrivatePaySection
+			font-size: 0.8em
+			input
+				width: 100%
+				background-color: transparent
+				border-bottom: 1px solid #4d4d4d
+				border-left: 0
+				border-top: 0
+				border-right: 0
+				font-size: 0.95em
+				height: 2.5em
+				vertical-align: baselain
+				outline: none
+				color: #fff
+			h3
+				font-size: 1.35em
+				margin-bottom: 2.3em
+		.formPrivateMessageSection,
+		.formPrivatePaySection
+			width: 100%
+		.formPrivatePaySection
+			margin: 4em 0 4em 0
+
+
+		.formPrivateNotifications
+			font-size: 0.8em
+			div
+				display: flex
+				flex-direction: row
+				justify-content: start
+				align-items: center
+				margin-bottom: 2em
+				span:nth-child(1)
+					margin-right: auto
+				label
+					text-transform: uppercase
+				input[type="radio"]	
+					margin: 0 1em 0 1em
+					appearance: none
+					width: 1em
+					height: 1em
+					border: 1px solid #c5c5c5
+					border-radius: 50%
+					&:before
+						content: ""
+						width: 100%
+						height: 100%
+						border-radius: 50%
+						display: block
+					&:checked:before
+						background-color: #5490cf
+
+			h3
+				font-size: 1.35em
+				margin-bottom: 3em
+
+.clientsRequests
+
+	background-color: #fefefe
+	margin-top: 7.2em
+	.clientsRequestsOpen,
+	.clientsRequestsCurrent
+		>h3	
+			font-size: 1em
+			margin-top: 2em 
+			margin-bottom: 1em
+			padding: 0 
+		>div
+			display: flex
+			flex-direction: row
+			align-items: stratch
+			border: 1px solid #ccc
+			padding: 0
+		.root
+			.clientsRequestsOpenIcon
+				@include background ('../img/icons/target.svg', right, 1.3em)
+			.clientsRequestsOpenFitures	
+				.clientsRequestsOpenFituresLabel
+					color: #c9c9c9
+					font-size: 0.65em
+				.clientsRequestsOpenFituresTowns
+					color:#222222
+					font-size: 0.75em
+					display: inline-block
+					width: 37%
+					& span
+						display: block
+				.clientsRequestsOpenFituresDate
+					> div
+						width: 2.5em
+						height: 2.5em
+						background-color: #f2f2f2
+						border: 1px solid #e3e3e3
+						border-radius: 2px
+						.clientsRequestsOpenFituresDateNumber
+							font-size: 0.8em
+							text-align: center
+						.clientsRequestsOpenFituresDateDay
+							font-size: 0.5em
+							text-transform: lowercase
+							text-align: center
+			.rootMap
+				.rootMapLocationPoint
+					@include background ('../img/icons/location_point.svg', right, 0.9em)
+				div:nth-child(2)
+					font-size: 0.6em
+					letter-spacing: 0px
+			.rootPrice
+				height: 35%
+				.rootPriceIcon
+					@include background ('../img/icons/price.svg', right top, 0.9em)
+				.rootPriceNumber
+					font-size: 1.25em
+
+		.cargoType
+			font-size: 0.75em
+			& >span:first-child
+				width: 1.25em
+				height: 1.25em
+				display: inline-block
+				@include background ('../img/icons/lorry.svg', center, 100%)	
+
+			.clientsRequestsOpenСargoType
+				color:#222222
+				& >span:first-child
+					width: 1.25em
+					height: 1.25em
+					display: inline-block
+					@include background ('../img/icons/yellow_dot.svg', center, 70%)	
+			
+			.clientsRequestsOpenСargoTypeName
+				color:#222222
+				font-size: 0.75em
+
+
+		.comments
+			position: relative
+			color: #222222
+			p,
+				font-size: 0.75em
+			> div
+				span:first-child
+					width: 1.25em
+					height: 1.25em
+					display: inline-block
+					@include background ('../img/icons/comments.svg', center, 70%)
+			.foolComents
+				width: 80%
+				box-sizing: border-box
+				padding: 1em
+				position: absolute
+				top: 20%
+				left: 10%
+				box-shadow: 0 10px 10px rgba(0,0,0,0.25);
+				background-color: #fff
+				z-index: 10
+				display: none												//comments
+				.link
+					text-align: right
+			.deleverAddress
+				height: 35%
+				.deleverAddressIcon
+					width: 1em
+					height: 1em
+					display: inline-block
+					@include background ('../img/icons/root.svg', top left, 100%)
+				.clientsRequestsOpenLabel
+					display: inline-block	
+				div
+					font-size: 0.75em
+
+		.rate
+			color:#222222
+			.clientsRequestsOpenLabel
+				text-align: center
+
+			.clientsRequestsOpenRate
+				font-size: 1.65em
+				text-align: center
+			.rateQuentity,
+			.rateViewes
+				font-size: 0.8em
+
+		.buyRate
+			color:#222222
+			display: flex
+			flex-direction: row
+			justify-content: center
+			button
+				border: 0px solid
+				border-radius: 16px
+				padding: 0 1em 0 1em
+				background-color: #5494d4
+				line-height: 2.8em
+				font-size: 0.68em
+				color: #fff
+				align-self: center
+		.clientsRequestsOpenLabel
+			color: #c9c9c9
+			font-size: 0.75em
+		.rootStatus
+			.rootStatusLength,
+			.rootStatusDelever
+				height: 10px
+				background: linear-gradient(#c9c9c9, #c9c9c9);
+				background-size: 100% 1px;
+				background-repeat: no-repeat;
+				background-position: center center;
+				position: relative
+				margin: 2.5em 0 2.5em 0
+			.rootStatusLength	
+				span:nth-child(1)
+					display: block
+					height: 1px
+					width: 50%
+					border: 0px solid #5394d6
+					background-color: #5394d6
+					box-shadow: 0 0px 5px rgba(83,148,214,0.5);
+					position: absolute
+					left: 0
+					top: 50%
+				span:nth-child(2)
+					display: block
+					height: 0.5em
+					width: 0.5em
+					border: 1px solid #5394d6
+					border-radius: 50%
+					background-color: #5394d6
+					box-shadow: 0 0px 5px rgba(83,148,214,0.5);
+					position: absolute
+					left: 50%
+				span:nth-child(3)
+					display: block
+					height: 1em
+					
+					position: absolute
+					left: 15%
+					top: -1.5em
+					color: #303030
+					font-size: 0.7em
+				span:nth-child(4)
+					display: block
+					height: 1em
+					width: 1em
+					position: absolute
+					left: 75%
+					top: -1.25em
+					color: #5394d6
+
+			.rootStatusDelever
+				span:nth-child(1)
+					display: block
+					height: 1px
+					width: 10%
+					border: 0px solid #5394d6
+					background-color: #5394d6
+					box-shadow: 0 0px 5px rgba(83,148,214,0.5);
+					position: absolute
+					left: 0
+					top: 50%
+				span:nth-child(2)
+					display: block
+					height: 0.5em
+					width: 0.5em
+					border: 1px solid #5394d6
+					border-radius: 50%
+					background-color: #5394d6
+					box-shadow: 0 0px 5px rgba(83,148,214,0.5);
+					position: absolute
+					left: 10%
+				span:nth-child(3)
+					display: block
+					height: 1em
+					width: 1em
+					position: absolute
+					left: 75%
+					top: -1.25em
+					color: #5394d6
+
+	.applications
+		h3
+			font-size: 1em
+			padding: 0 
+			margin: 3.75em 0 2.2em 4.5em
+		.deliverFitures
+			display: none										//comments
+		.applicationsTable
+			color: #bababa
+			
+			.applicationsTableRow
+				.applicationsTableCol
+					border-bottom: 1px solid #e3e3e3
+					padding: 1em
+					text-align: center
+					vertical-align: top
+				.applicationsTableCol:nth-child(1)
+					border-right: 1px solid #e3e3e3
+				.applicationsTableCol:nth-child(2)
+					border-right: 1px solid #e3e3e3
+				.applicationsTableCol:nth-child(3)
+					border-right: 1px solid #e3e3e3
+				.applicationsTableCol:nth-child(4)
+					border-right: 1px solid #e3e3e3
+					text-align: left
+				.applicationsTableCol:nth-child(5)
+					.applicationPrise,
+					.currencyType
+						display: block
+	nav
+		margin: 2.8em 0 6em
+		ul
+			justify-content: center
+			.back
+				width: 1.25em
+				height: 1.25em
+				display: inline-block
+				@include background ('../img/icons/back.svg', center, 80%)
+			.next
+				width: 1.25em
+				height: 1.25em
+				display: inline-block
+				@include background ('../img/icons/next.svg', center, 80%)
+		.page-link
+			border: 0px
+			&:hover
+				border-bottom: 2px solid #5494d4
+				border-radius: 0
+	.clientsRequestsReviews
+		padding-left: 6.56em
+		list-style: none			
+		li
+			margin-right: 0.15em
+			display: inline-block
+			&:not(:first-child)
+				&::before
+					content: '\B7'
+					margin-right: 0.15em
+		.clientsRequestsReviewsAll
+			font-size: 1em
+		.clientsRequestsReviewsPositive
+			font-size: 0.75em
+			span:nth-child(1)
+				color: #02dc30
+			span:nth-child(2)
+				color: #c0c0c0
+		.clientsRequestsReviewsNegative
+			font-size: 0.75em
+			span:nth-child(1)
+				color: #f88777
+			span:nth-child(2)
+				color: #c0c0c0
+	.clientsRequestsStory
+		text-align: justify
+		padding: 2em 6.56em
+	.clientsRequestsSlogan,
+	.clientsRequestsLocation
+		text-align: center
+	
+
+@media (min-width: 1200px)
+
+	body
+		font-size: 1.1em
+
+@media (min-width: 1300px)
+
+	body
+		font-size: 1.2em
+
+@media (min-width: 991.6px)
+	.root,
+	.cargoType,
+	.comments,
+	.rate
+		background: linear-gradient(#c9c9c9, #c9c9c9);
+		background-size: 1px 70%;
+		background-repeat: no-repeat;
+		background-position: 99% center;
+
+@media (max-width: 991.5px)
+
+	body
+		font-size: 1.2em
+		
+		.clientsRequests
+
+			.clientsRequestsOpen
+				font-size: 1.1em
+				.root,
+				.cargoType,
+				.comments,
+				.rate,
+				.buyRate
+					border: 1px solid #c9c9c9
+				.root	
+					.clientsRequestsOpenIcon
+						background-position: 85%
+					.clientsRequestsOpenFitures	
+						.clientsRequestsOpenFituresLabel
+							
+						.clientsRequestsOpenFituresTowns
+							
+						.clientsRequestsOpenFituresDate
+							
+				.cargoType
+					text-align: center
+					.clientsRequestsOpenСargoTypeName
+						color:#222222
+						font-size: 1em
+
+@media (max-width: 767.5px)
+
+	body
+		font-size: 1.0em
+		
+		

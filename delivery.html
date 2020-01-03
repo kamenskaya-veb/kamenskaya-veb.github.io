@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевозчики</title>
+    <script defer src="libs/jquery/jquery-3.4.1.min.js"></script>
+    <script defer src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <!--<script src="libs/rateit.js-master/scripts/jquery.rateit.min.js"></script>
+     <link rel="import" href="carusel.html"onload="handleLoad(event)" onerror="handleError(event)" >   <script defer src="js/function.js"></script>-->
+
+    <script defer src="js/delivery.js"></script>
+    <script defer src="js/navbarMenu.js"></script>
+    <script defer src="js/filter.js"></script>
+    <script defer src="js/up.js"></script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style/style.css">
+    <link rel="stylesheet" type="text/css" href="css/media/mediaLogin.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css">
+    <link rel="stylesheet" href="css/style/navbarMenu.css">
+    <link rel="stylesheet" href="css/media/navbarMenu.css">
+    <link rel="stylesheet" href="css/media/media.css">
+    <link rel="stylesheet" href="css/style/carusel.css">
+    <link rel="stylesheet" href="css/style/filter.css">
+    <link rel="stylesheet" href="css/style/delivery.css">
+    <link rel="stylesheet" href="css/style/up.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+<a id="button" class="vis"></a>
+<div class="container-fluid">
+    <div class="row rowNavbar">
+        <div class="offset-1 col-11 ">
+            <nav class="navbarMenu">
+                <a class="" href="index.php"><img src="img/vektor.png" alt="" width="160" height="50"></a>
+                <button class="burger"></button>
+                <ul class="menuList" id="menuList">
+                    <li><a class="" href="index.php">Главная</a></li>
+                    <li><a class="" href="#">Перевозчики</a></li>
+                    <li><a class="" href="#">Заказчики</a></li>
+                    <li class="dropdownMenu"><a class="" href="#">Сервис &#8594;</a>
+                        <ul class="dropdownItem" >
+                            <li><a href="index.php#info">О нас</a></li>
+                            <li><a href="index.php#work">Как это работает?</a></li>
+                            <li><a href="index.php#news">Новости</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="" href="#">Тарифы</a></li>
+                    <!--<li><a class="" href="login.html" target = "_blank">Вход/Регистрация</a></li>-->
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row rowNewOrders">
+        <div class="col-12 newOrdersHead">
+            <span>перевозчики</span> <br>
+            <span>Данным фильтром  Вы можете быстро найти лучшего <br> перевозчика по выгодной цене </span>
+            <div class="filter" id="filter">
+                <div>
+                    <input  id="type" type="text" placeholder="Тип перевозчика"><br>
+                    <label>Тип перевозчика</label>
+                    <ul class="select" id="selectType">
+                        <li>Частное лицо</li>
+                        <li>Компания</li>
+                    </ul>
+                </div>
+                <div>
+                    <input  id="region" type="text" placeholder="Регион"><br>
+                    <label>Выберите регион</label>
+                    <ul class="select" id="selectRegion"></ul>
+
+                </div>
+                <div>
+                    <input id="town" type="text" placeholder="Город"><br>
+                    <label>Выберите населенный пункт</label>
+                    <ul class="select" id="selectTown">
+                    </ul>
+                </div>
+                <div>
+                    <input id="tarifPlane" type="text" placeholder="Тариф"><br>
+                    <label>Тарифный план</label>
+                    <ul class="select" id="selectTarifPlane">
+                        <li>Small</li>
+                        <li>Medium</li>
+                        <li>Large</li>
+                    </ul>
+                </div>
+                <div><button id="filter_reset">Сброс</button><br>
+                    <label>Сбросить фильтр</label>
+                </div>
+            </div>
+        </div>
+        <div class="offset-1 col-10 offset-1 newOrdersGallery">
+            <div class="galleryItems">
+                <div class="img">
+                    <img src="img/delivery/litvatour.jpg" alt="" >
+                </div>
+                <div class="mail">
+
+                    <a href="mailto:kamenskaya77@ukr.net"> &#9993;</a>
+                </div>
+                <div class="tariffPlan flagSmall">small</div>
+                <div class="iconInfo">
+                    <div class="iconHamer"></div>
+                    <div class ="quantityRade">3</div>
+                    <div class="iconEye"></div>
+                    <div class ="quantityViews">45</div>
+                </div>
+                <div class="info">
+                    <table cellspacing ="10" class="infoTable" >
+                        <tr>
+                            <td><img src="img/icon/username.svg" alt="icon"></td>
+                            <td><b class="typeFace"> Компания </b></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/icon/apart.svg" alt="icon"></td>
+                            <td><b>"Track 191"</b></td>
+                        </tr>
+                    </table>
+                    <div class="infoCount">
+                        <span>выполнил <b>118</b> заказов</span>
+                    </div>
+                    <div class="infoStars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="infoTel">+38096 789 54 21</div>
+                    <div class="infoData">
+                        <span>Зарегистрирован на сайте с 06.04.2015</span>
+                    </div>
+                    <div class="infoCiti">Жмеринка</div>
+                </div>
+            </div>
+            <div class="galleryItems">
+                <div class="img">
+                    <img src="img/delivery/auto1.png" alt="" >
+                </div>
+                <div class="mail">
+                    <a href="mailto:kamenskaya77@ukr.net"> &#9993;</a>
+                </div>
+                <div class="tariffPlan flagLarge">large</div>
+                <div class="iconInfo">
+                    <div class="iconHamer"></div>
+                    <div class ="quantityRade">3</div>
+                    <div class="iconEye"></div>
+                    <div class ="quantityViews">45</div>
+                </div>
+                <div class="info">
+                    <table cellspacing ="10" class="infoTable" >
+                        <tr>
+                            <td><img src="img/icon/username.svg" alt="icon"></td>
+                            <td><b class="typeFace">Частное лицо</b></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/icon/apart.svg" alt="icon"></td>
+                            <td><b>"Track 191"</b></td>
+                        </tr>
+                    </table>
+                    <div class="infoCount">
+                        <span>выполнил <b>45</b> заказов</span>
+                    </div>
+                    <div class="infoStars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="infoTel">+38096 789 54 21</div>
+                    <div class="infoData">
+                        <span>Зарегистрирован на сайте с 06.04.2015</span>
+                    </div>
+                    <div class="infoCiti">Киев</div>
+                </div>
+            </div>
+            <div class="galleryItems">
+                <div class="img">
+                    <img src="img/delivery/avto2.png" alt="" >
+                </div>
+                <div class="mail">
+                    <a href="mailto:kamenskaya77@ukr.net"> &#9993;</a>
+                </div>
+                <div class="tariffPlan flagMedium">medium</div>
+                <div class="iconInfo">
+                    <div class="iconHamer"></div>
+                    <div class ="quantityRade">3</div>
+                    <div class="iconEye"></div>
+                    <div class ="quantityViews">45</div>
+                </div>
+                <div class="info">
+                    <table cellspacing ="10" class="infoTable" >
+                        <tr>
+                            <td><img src="img/icon/username.svg" alt="icon"></td>
+                            <td><b class="typeFace">Частное лицо</b></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/icon/apart.svg" alt="icon"></td>
+                            <td><b>"Track 191"</b></td>
+                        </tr>
+                    </table>
+                    <div class="infoCount">
+                        <span>выполнил <b>76</b> заказов</span>
+                    </div>
+                    <div class="infoStars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="infoTel">+38096 789 54 21</div>
+                    <div class="infoData">
+                        <span>Зарегистрирован на сайте с 06.04.2015</span>
+                    </div>
+                    <div class="infoCiti">николаев</div>
+            </div>
+            </div>
+            <div class="galleryItems">
+                <div class="img">
+                    <img src="img/delivery/avto3.jpg" alt="" >
+                </div>
+                <div class="mail">
+                    <a href="mailto:kamenskaya77@ukr.net"> &#9993;</a>
+                </div>
+                <div class="tariffPlan flagSmall">small</div>
+                <div class="iconInfo">
+                    <div class="iconHamer"></div>
+                    <div class ="quantityRade">3</div>
+                    <div class="iconEye"></div>
+                    <div class ="quantityViews">45</div>
+                </div>
+                <div class="info">
+                    <table cellspacing ="10" class="infoTable" >
+                        <tr>
+                            <td><img src="img/icon/username.svg" alt="icon"></td>
+                            <td><b class="typeFace">Частное лицо</b></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/icon/apart.svg" alt="icon"></td>
+                            <td><b>"Track 191"</b></td>
+                        </tr>
+                    </table>
+                    <div class="infoCount">
+                        <span>выполнил <b>98</b> заказов</span>
+                    </div>
+                    <div class="infoStars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="infoTel">+38096 789 54 21</div>
+                    <div class="infoData">
+                        <span>Зарегистрирован на сайте с 06.04.2015</span>
+                    </div>
+                    <div class="infoCiti">Киев</div>
+                </div>
+            </div>
+            <div class="galleryItems">
+                <div class="img">
+                    <img src="img/delivery/4f8fe44fc4ab.jpg" alt="" >
+                </div>
+                <div class="mail">
+                    <a href="mailto:kamenskaya77@ukr.net"> &#9993;</a>
+                </div>
+                <div class="tariffPlan flagSmall">small</div>
+                <div class="iconInfo">
+                    <div class="iconHamer"></div>
+                    <div class ="quantityRade">3</div>
+                    <div class="iconEye"></div>
+                    <div class ="quantityViews">45</div>
+                </div>
+                <div class="info">
+                    <table cellspacing ="10" class="infoTable" >
+                        <tr>
+                            <td><img src="img/icon/username.svg" alt="icon"></td>
+                            <td><b class="typeFace">Компания</b></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/icon/apart.svg" alt="icon"></td>
+                            <td><b>"Track 191"</b></td>
+                        </tr>
+                    </table>
+                    <div class="infoCount">
+                        <span>выполнил <b>118</b> заказов</span>
+                    </div>
+                    <div class="infoStars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="infoTel">+38096 789 54 21</div>
+                    <div class="infoData">
+                        <span>Зарегистрирован на сайте с 06.04.2015</span>
+                    </div>
+                    <div class="infoCiti">Киев</div>
+                </div>
+            </div>
+            <div class="galleryItems">
+                <div class="img">
+                    <img src="img/delivery/bus.jpg" alt="" >
+                </div>
+                <div class="mail">
+                    <a href="mailto:kamenskaya77@ukr.net"> &#9993;</a>
+                </div>
+                <div class="tariffPlan flagLarge">Large</div>
+                <div class="iconInfo">
+                    <div class="iconHamer"></div>
+                    <div class ="quantityRade">3</div>
+                    <div class="iconEye"></div>
+                    <div class ="quantityViews">45</div>
+                </div>
+                <div class="info">
+                    <table cellspacing ="10" class="infoTable" >
+                        <tr>
+                            <td><img src="img/icon/username.svg" alt="icon"></td>
+                            <td><b class="typeFace">Компания</b></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/icon/apart.svg" alt="icon"></td>
+                            <td><b>"Track 191"</b></td>
+                        </tr>
+                    </table>
+                    <div class="infoCount">
+                        <span>выполнил <b>118</b> заказов</span>
+                    </div>
+                    <div class="infoStars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="infoTel">+38096 789 54 21</div>
+                    <div class="infoData">
+                        <span>зарегистрирован на сайте с 06.04.2015</span>
+                    </div>
+                    <div class="infoCiti">львов</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 newOrdersMore">
+            <span>больше перевозчиков</span> <br>
+            <span>&#149;&#149;&#149;</span>
+        </div>
+
+    <div class="col-12 newsHead ">
+        <p>частые</p>
+        <span id="span">вопросы</span>
+<p></p>
+    <div class="newsBottom"><span>Если вы не нашли ответа на свой вопрос, <br> тогда воспользуйтесь формой обратной связи</span>
+    <p></p>
+    </div>
+    </div>
+</div>
+</div>
+<div class="container-fluid">
+
+    <div class="row rowFAQ">
+        <div class="offset-lg-1 col-lg-10 offset-lg-1 offset-sm-1 col-sm-10 offset-sm-1 offset-md-1 col-md-10 offset-md-1 offset-1 col-10 offset-1 colFAQ">
+            <div class="FAQSender">
+                <figure>
+                    <figcaption> <img class="imgBorder" src="img/o.png" alt="o">тправителю </figcaption>
+                </figure>
+                <div class="faq">
+                    <details tabindex>
+                        <summary>Сколько будет стоить перевозка? </summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                    <details tabindex>
+                        <summary>У Вас есть собственный транспорт?</summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                    <details tabindex>
+                        <summary>Какие грузоперевозки я могу заказать?</summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                    <details tabindex>
+                        <summary>Как оформить заказ?</summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                    <details tabindex>
+                        <summary>Какие гарантии перевозки груза?</summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                    <details tabindex>
+                        <summary>Когда производится оплата заказа?</summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                </div>
+            </div>
+            <div class="FAQDelivery">
+                <figure>
+                    <figcaption> <img src="img/п.png" alt="п">еревозчику </figcaption>
+                </figure>
+                <div class="faq">
+                    <details tabindex>
+                        <summary>Сколько будет стоить перевозка? </summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                    <details tabindex>
+                        <summary>У Вас есть собственный транспорт?</summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                    <details tabindex>
+                        <summary>Какие грузоперевозки я могу заказать?</summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                    <details tabindex>
+                        <summary>Как оформить заказ?</summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                    <details tabindex>
+                        <summary>Какие гарантии перевозки груза?</summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                    <details tabindex>
+                        <summary>Когда производится оплата заказа?</summary>
+                        <span>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates</span>
+                    </details>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="row rowFooter">
+        <div class="offset-1 col-10 offset-1 colFooter">
+            <div class="footerItems">
+                <h6>о нас</h6>
+                <span>Мы предоставляем Вам удобный онлай-сервис для организации грузоперевозок в новом формате "<b>Отправитель - Перевозчик</b>",без посредников.</span>
+            </div>
+            <div class="footerItems">
+                <h6>как начать?</h6>
+                <span>Просто создайте заявку с грузом на перевозку и вам тут же будет поступать самые выгодные цены от грузоперевозчиков.</span>
+                <br><button name="mailto" class="btnView">Разместить груз</button>
+            </div>
+            <div class="footerItems">
+                <h6>меню</h6>
+                <ul>
+                    <li><a class="settingLink" href="#">Перевозчики</a></li>
+                    <li><a class="settingLink" href="#">Заказы</a></li>
+                    <li><a class="settingLink" href="index.php#work">Как это работает?</a></li>
+                    <li><a class="settingLink" href="index.php#qwert">Тарифы</a></li>
+                    <li><a class="settingLink" href="#">Правила</a></li>
+                </ul>
+            </div>
+            <div class="footerItems">
+                <h6>информация</h6>
+                <ul>
+                    <li><a class="settingLink" href="index.php#info">О нас</a></li>
+                    <li><a class="settingLink" href="index.php#news">Новости</a></li>
+                    <li><a class="settingLink" href="contacts.html">Контакты</a></li>
+                </ul>
+                <ul class ="langList">
+                    <li class="langItem"><a href="">Rus </a>&#149;</li>
+                    <li class="langItem"><a href="">Eng </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row rowBasement">
+        <div  class="col-12 colBasement">
+            <p>&#169; 2019 KVISH <b>7</b>, все права защищены</p>
+            <p>Разработка дизайн-макета DFRE@FGR</p>
+            <span>+380965902357</span>
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

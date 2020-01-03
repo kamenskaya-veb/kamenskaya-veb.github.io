@@ -1,0 +1,863 @@
+@charset "UTF-8";
+body {
+  background-color: #23485B; }
+
+.label {
+  color: #c0c0c0; }
+
+.clear {
+  clear: both; }
+
+.link {
+ /* font-size: 0.7em;*/
+  color: #5495d5;
+  text-transform: lowercase; }
+
+.clientData {
+  color: #fefefe;
+  position: relative; }
+  .clientData .clientDataOnlineStatus {
+    margin: 0 0 1em 0; }
+    .clientData .clientDataOnlineStatus span:nth-child(1) {
+      background-image: url("../img/icons/green-dot.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      width: 1em;
+      height: 0.7em;
+      display: inline-block; }
+    .clientData .clientDataOnlineStatus .clientEdit {
+      background-image: url("../img/icons/edit.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 25%;
+      height: 2em;
+      display: inline-block; }
+  .clientData .clientDataLabel {
+    color: #767676;
+    font-size: 0.7em;
+    word-spacing: normal; }
+  .clientData .clientDataFitures {
+    padding-left: 0; }
+    .clientData .clientDataFitures div {
+      margin-bottom: 0.4em; }
+    .clientData .clientDataFitures .card_inscription {
+      font-size: 0.85em; }
+    .clientData .clientDataFitures .clientPhoneVisibility {
+      background-image: url("../img/icons/hide.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 40%; }
+    .clientData .clientDataFitures .clientEmail {
+      background-image: url("../img/icons/contact.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 40%; }
+  .clientData .clientPhoto {
+    max-height: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    /*image: url("../img/icons/photo-camera.svg");*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 6em; }
+    .clientData .clientPhoto img {
+      height: 100%;
+      width: 100%; }
+  .clientData .clientDataLanguages {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-top: 0.75em; }
+    .clientData .clientDataLanguages ul {
+      margin: 0;
+      padding: 0; }
+      .clientData .clientDataLanguages ul li {
+        margin-right: 0.25em;
+        display: inline-block; }
+        .clientData .clientDataLanguages ul li:not(:first-child)::before {
+          content: '\B7';
+          margin-right: 0.25em; }
+  .clientData .clientDataReview {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-top: 0.75em; }
+    .clientData .clientDataReview .positivReview {
+      color: #41f0ad; }
+    .clientData .clientDataReview .negativeReview {
+      color: #f8705a; }
+  .clientData .clientDataAboutClient {
+    margin-top: 0.75em;
+    font-size: 0.8em; }
+  .clientData .clientDataIcons .socialIcons {
+    height: 3em; }
+  .clientData .clientDataIcons .socialIcons:nth-child(1) {
+    background-image: url("../img/icons/skype.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .socialIcons:nth-child(2) {
+    background-image: url("../img/icons/whatsapp.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .socialIcons:nth-child(3) {
+    background-image: url("../img/icons/facebook.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .socialIcons:nth-child(4) {
+    background-image: url("../img/icons/instagram.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .socialIcons:nth-child(5) {
+    background-image: url("../img/icons/viber.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .paySistem {
+    height: 3em; }
+  .clientData .clientDataIcons .paySistem:nth-child(6) {
+    background-image: url("../img/icons/paypal.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .paySistem:nth-child(7) {
+    background-image: url("../img/icons/visa.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataIcons .paySistem:nth-child(8) {
+    background-image: url("../img/icons/mastercard.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+  .clientData .clientDataGraphic {
+    margin-bottom: 2em; }
+  .clientData .clientDataStatistic {
+    margin-top: 1.25em; }
+    .clientData .clientDataStatistic h3 {
+      text-size: 1em;
+      line-height: 2em;
+      text-transform: uppercase;
+      text-align: center; }
+    .clientData .clientDataStatistic .clientDataStatisticOpen {
+      color: blue; }
+    .clientData .clientDataStatistic .clientDataStatisticOpen,
+    .clientData .clientDataStatistic .clientDataStatisticCloses {
+      font-size: 5em; }
+    .clientData .clientDataStatistic div:nth-child(3) {
+      font-sise: 1em;
+      color: #767676; }
+  .clientData .deleverStatistic .deleverStatisticRootLength,
+  .clientData .deleverStatistic .deleverStatisticCompletedOrder,
+  .clientData .deleverStatistic .deleverStatisticCarPark {
+    height: 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c9c9c9), to(#c9c9c9));
+    background: -webkit-linear-gradient(#c9c9c9, #c9c9c9);
+    background: -o-linear-gradient(#c9c9c9, #c9c9c9);
+    background: linear-gradient(#c9c9c9, #c9c9c9);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+    margin: 2.5em 0 2.5em 0; }
+    .clientData .deleverStatistic .deleverStatisticRootLength > span:nth-child(1),
+    .clientData .deleverStatistic .deleverStatisticCompletedOrder > span:nth-child(1),
+    .clientData .deleverStatistic .deleverStatisticCarPark > span:nth-child(1) {
+      display: block;
+      height: 1px;
+      width: 50%;
+      border: 0px;
+      background-color: #5394d6;
+      -webkit-box-shadow: 0 0px 10px rgba(83, 148, 214, 0.75);
+      box-shadow: 0 0px 10px rgba(83, 148, 214, 0.75);
+      position: absolute;
+      left: 0;
+      top: 48%; }
+    .clientData .deleverStatistic .deleverStatisticRootLength span:nth-child(2),
+    .clientData .deleverStatistic .deleverStatisticCompletedOrder span:nth-child(2),
+    .clientData .deleverStatistic .deleverStatisticCarPark span:nth-child(2) {
+      display: block;
+      height: 0.5em;
+      width: 0.5em;
+      border: 1px solid #5394d6;
+      border-radius: 50%;
+      background-color: #5394d6;
+      -webkit-box-shadow: 0 0px 15px rgba(250, 250, 250, 0.8);
+      box-shadow: 0 0px 15px rgba(250, 250, 250, 0.8);
+      position: absolute;
+      left: 50%; }
+    .clientData .deleverStatistic .deleverStatisticRootLength span:nth-child(3),
+    .clientData .deleverStatistic .deleverStatisticCompletedOrder span:nth-child(3),
+    .clientData .deleverStatistic .deleverStatisticCarPark span:nth-child(3) {
+      display: block;
+      height: 1em;
+      position: absolute;
+      left: 15%;
+      top: -1.5em;
+      color: #c0c0c0;
+      font-size: 0.7em; }
+    .clientData .deleverStatistic .deleverStatisticRootLength span:nth-child(4),
+    .clientData .deleverStatistic .deleverStatisticCompletedOrder span:nth-child(4),
+    .clientData .deleverStatistic .deleverStatisticCarPark span:nth-child(4) {
+      display: block;
+      height: 1em;
+      width: 1em;
+      position: absolute;
+      left: 75%;
+      top: -1.25em;
+      color: #5394d6;
+      font-size: 1.25em; }
+  .clientData .deleverStatistic button {
+    color: #c0c0c0;
+    font-size: 1em;
+    border: 2px solid #F7EA0A;
+    border-radius: 1.25em;
+    background-color: transparent;
+    padding: 0.3em 1em 0.3em 1em; }
+  .clientData .deleverStatistic button.choise {
+    margin-right: 1em;
+    float: right; }
+  .clientData .deleverTarifTimer {
+    min-width: 16em;
+    margin-top: 2em;
+    background-color: transparent;
+    border: 1px solid #c0c0c0;
+    border-radius: 0.7em; }
+    .clientData .deleverTarifTimer legend {
+      padding: 0 1em 0 1em;
+      margin: 0 auto;
+      width: auto;
+      text-transform: uppercase;
+      font-size: 0.9em; }
+    .clientData .deleverTarifTimer button.extend {
+      margin: 1.5em auto;
+      padding: 0.3em 2em 0.3em 2em;
+      display: block; }
+    .clientData .deleverTarifTimer .deleverTarifTimerType {
+      color: #f5eb68;
+      font-size: 0.9em;
+      text-align: center;
+      margin-bottom: 1.5em;
+      margin-top: 0.5em; }
+    .clientData .deleverTarifTimer .deleverTarifTimerCounter {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .clientData .deleverTarifTimer .deleverTarifTimerCounter > div {
+        margin: 0 0.2em; }
+      .clientData .deleverTarifTimer .deleverTarifTimerCounter .timerNambers {
+        font-size: 2em;
+        line-height: 1em; }
+      .clientData .deleverTarifTimer .deleverTarifTimerCounter .timerLables {
+        font-size: 0.4em;
+        text-align: center; }
+    .clientData .deleverTarifTimer .separator {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      align-item: center;
+      padding: 0px; }
+  .clientData .formPrivateData {
+    width: 84%;
+    margin-left: 8%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #303030;
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .clientData .formPrivateData div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .clientData .formPrivateData > div:nth-child(-n+2) {
+      width: 30%;
+      padding-right: 4em; }
+    .clientData .formPrivateData > div:nth-child(3) {
+      width: 40%;
+      padding-right: 4em; }
+    .clientData .formPrivateData input[type="submit"] {
+      margin-left: auto;
+      margin-right: 3.75em;
+      margin-bottom: 3.125em;
+      background-color: #5494d4;
+      font-size: 0.75em;
+      line-height: 3.33em;
+      padding: 0 1.65em 0 1.65em;
+      border: 0;
+      border-radius: 1.65em;
+      color: #fff; }
+    .clientData .formPrivateData .formPrivateDateSection,
+    .clientData .formPrivateData .formPrivateMessageSection,
+    .clientData .formPrivateData .formPrivatePaySection {
+      font-size: 0.8em; }
+      .clientData .formPrivateData .formPrivateDateSection input,
+      .clientData .formPrivateData .formPrivateMessageSection input,
+      .clientData .formPrivateData .formPrivatePaySection input {
+        width: 100%;
+        background-color: transparent;
+        border-bottom: 1px solid #4d4d4d;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+        font-size: 0.95em;
+        height: 2.5em;
+        vertical-align: baselain;
+        outline: none;
+        color: #fff; }
+      .clientData .formPrivateData .formPrivateDateSection h3,
+      .clientData .formPrivateData .formPrivateMessageSection h3,
+      .clientData .formPrivateData .formPrivatePaySection h3 {
+        font-size: 1.35em;
+        margin-bottom: 2.3em; }
+    .clientData .formPrivateData .formPrivateMessageSection,
+    .clientData .formPrivateData .formPrivatePaySection {
+      width: 100%; }
+    .clientData .formPrivateData .formPrivatePaySection {
+      margin: 4em 0 4em 0; }
+    .clientData .formPrivateData .formPrivateNotifications {
+      font-size: 0.8em; }
+      .clientData .formPrivateData .formPrivateNotifications div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 2em; }
+        .clientData .formPrivateData .formPrivateNotifications div span:nth-child(1) {
+          margin-right: auto; }
+        .clientData .formPrivateData .formPrivateNotifications div label {
+          text-transform: uppercase; }
+        .clientData .formPrivateData .formPrivateNotifications div input[type="radio"] {
+          margin: 0 1em 0 1em;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          width: 1em;
+          height: 1em;
+          border: 1px solid #c5c5c5;
+          border-radius: 50%; }
+          .clientData .formPrivateData .formPrivateNotifications div input[type="radio"]:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: block; }
+          .clientData .formPrivateData .formPrivateNotifications div input[type="radio"]:checked:before {
+            background-color: #5490cf; }
+      .clientData .formPrivateData .formPrivateNotifications h3 {
+        font-size: 1.35em;
+        margin-bottom: 3em; }
+
+.deleverInformation {
+  background-color: #fefefe;
+  margin-top: 7.2em; }
+  .deleverInformation > h3:nth-of-type(-n+2) {
+    margin-top: 3em;
+    margin-bottom: 1.25em; }
+  .deleverInformation .carentOrders,
+  .deleverInformation .rejectionOder {
+    border: 1px solid #eee;
+    -webkit-box-shadow: 0 0px 10px rgba(225, 225, 225, 0.75);
+    box-shadow: 0 0px 10px rgba(225, 225, 225, 0.75);
+    position: relative;
+    margin-bottom: 5em; }
+  .deleverInformation .carentOrders .root .clientsRequestsOpenTitle .clientsRequestsOpenIcon {
+    background-image: url("../img/icons/target.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1.3em; }
+  .deleverInformation .carentOrders .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresLabel {
+    color: #c9c9c9;
+    font-size: 0.85em; }
+  .deleverInformation .carentOrders .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresTowns {
+    color: #222222;
+    font-size: 0.85em;
+    display: inline-block;
+    width: 37%; }
+    .deleverInformation .carentOrders .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresTowns span {
+      display: block; }
+  .deleverInformation .carentOrders .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresDate > div {
+    width: 2.5em;
+    height: 2.5em;
+    background-color: #f2f2f2;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px; }
+    .deleverInformation .carentOrders .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresDate > div .clientsRequestsOpenFituresDateNumber {
+      font-size: 0.8em;
+      text-align: center; }
+    .deleverInformation .carentOrders .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresDate > div .clientsRequestsOpenFituresDateDay {
+      font-size: 0.5em;
+      text-transform: lowercase;
+      text-align: center; }
+  .deleverInformation .carentOrders .root .rootMap .rootMapLocationPoint {
+    background-image: url("../img/icons/location_point.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 0.9em; }
+  .deleverInformation .carentOrders .root .rootMap div:nth-child(2) {
+    font-size: 0.6em;
+    letter-spacing: 0px; }
+  .deleverInformation .carentOrders .root .rootPrice {
+    height: 35%;
+    margin-top: auto; }
+    .deleverInformation .carentOrders .root .rootPrice .rootPriceIcon {
+      background-image: url("../img/icons/price.svg");
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-size: 0.9em; }
+    .deleverInformation .carentOrders .root .rootPrice .rootPriceNumber {
+      font-size: 1.25em; }
+  .deleverInformation .carentOrders .cargoType > span:first-child {
+    width: 1.25em;
+    height: 1.25em;
+    display: inline-block;
+    background-image: url("../img/icons/lorry.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%; }
+  .deleverInformation .carentOrders .cargoType .clientsRequestsOpenСargoType {
+    color: #222222; }
+    .deleverInformation .carentOrders .cargoType .clientsRequestsOpenСargoType > span:first-child {
+      width: 1.25em;
+      height: 1.25em;
+      display: inline-block;
+      background-image: url("../img/icons/yellow_dot.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 70%; }
+  .deleverInformation .carentOrders .cargoType .clientsRequestsOpenСargoTypeName {
+    color: #222222;
+    font-size: 0.85em;
+    text-align: center; }
+  .deleverInformation .carentOrders .comments {
+    position: relative;
+    color: #222222; }
+    .deleverInformation .carentOrders .comments p {
+      font-size: 0.85em; }
+    .deleverInformation .carentOrders .comments > div span:first-child {
+      width: 1.25em;
+      height: 1.25em;
+      display: inline-block;
+      background-image: url("../img/icons/comments.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 70%; }
+    .deleverInformation .carentOrders .comments .foolComents {
+      width: 80%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 1em;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+      background-color: #fff;
+      z-index: 10;
+      display: none; }
+    .deleverInformation .carentOrders .comments .deleverAddress {
+      height: 35%; }
+      .deleverInformation .carentOrders .comments .deleverAddress .deleverAddressIcon {
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        background-image: url("../img/icons/root.svg");
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 100%; }
+      .deleverInformation .carentOrders .comments .deleverAddress div {
+        font-size: 0.85em;
+        display: inline-block; }
+      .deleverInformation .carentOrders .comments .deleverAddress .address {
+        margin-left: 1em; }
+  .deleverInformation .carentOrders .rootStatus .label {
+    text-align: center; }
+  .deleverInformation .carentOrders .rootStatus .rootStatusLength,
+  .deleverInformation .carentOrders .rootStatus .rootStatusDelever {
+    height: 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c9c9c9), to(#c9c9c9));
+    background: -webkit-linear-gradient(#c9c9c9, #c9c9c9);
+    background: -o-linear-gradient(#c9c9c9, #c9c9c9);
+    background: linear-gradient(#c9c9c9, #c9c9c9);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    margin: 2.5em 0 2.5em 0; }
+  .deleverInformation .carentOrders .rootStatus .rootStatusLength span:nth-child(1) {
+    display: block;
+    height: 1px;
+    width: 50%;
+    border: 0px solid #5394d6;
+    background-color: #5394d6;
+    -webkit-box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    position: absolute;
+    left: 0;
+    top: 50%; }
+  .deleverInformation .carentOrders .rootStatus .rootStatusLength span:nth-child(2) {
+    display: block;
+    height: 0.5em;
+    width: 0.5em;
+    border: 1px solid #5394d6;
+    border-radius: 50%;
+    background-color: #5394d6;
+    -webkit-box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    position: absolute;
+    left: 50%; }
+  .deleverInformation .carentOrders .rootStatus .rootStatusLength span:nth-child(3) {
+    display: block;
+    height: 1em;
+    position: absolute;
+    left: 15%;
+    top: -1.5em;
+    color: #303030;
+    font-size: 0.7em; }
+  .deleverInformation .carentOrders .rootStatus .rootStatusLength span:nth-child(4) {
+    display: block;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    left: 75%;
+    top: -1.25em;
+    color: #5394d6; }
+  .deleverInformation .carentOrders .rootStatus .rootStatusDelever span:nth-child(1) {
+    display: block;
+    height: 1px;
+    width: 10%;
+    border: 0px solid #5394d6;
+    background-color: #5394d6;
+    -webkit-box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    position: absolute;
+    left: 0;
+    top: 50%; }
+  .deleverInformation .carentOrders .rootStatus .rootStatusDelever span:nth-child(2) {
+    display: block;
+    height: 0.5em;
+    width: 0.5em;
+    border: 1px solid #5394d6;
+    border-radius: 50%;
+    background-color: #5394d6;
+    -webkit-box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    box-shadow: 0 0px 5px rgba(83, 148, 214, 0.5);
+    position: absolute;
+    left: 10%; }
+  .deleverInformation .carentOrders .rootStatus .rootStatusDelever span:nth-child(3) {
+    display: block;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    left: 75%;
+    top: -1.25em;
+    color: #5394d6; }
+  .deleverInformation .carentOrders .carentOrdersButton {
+    font-size: 0.85em;
+    padding: 0.8em 1.25em;
+    color: #fff;
+    border-radius: 1.425em;
+    border: 0;
+    background-color: #5495d5;
+    position: absolute;
+    top: 112%;
+    right: 3%; }
+  .deleverInformation .rejectionOder {
+    position: relative;
+    display: none;
+  }
+    .deleverInformation .rejectionOder form > div:first-child {
+      padding-bottom: 2em; }
+    .deleverInformation .rejectionOder h3 {
+      text-transform: uppercase;
+      font-size: 1em;
+      margin-top: 1.5em;
+      margin-bottom: 1.25em; }
+    .deleverInformation .rejectionOder .reasons,
+    .deleverInformation .rejectionOder .descriptions {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .deleverInformation .rejectionOder .reasons {
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; }
+      .deleverInformation .rejectionOder .reasons div:first-child {
+        margin-top: auto; }
+      .deleverInformation .rejectionOder .reasons div {
+        margin: 0.5em 0; }
+        .deleverInformation .rejectionOder .reasons div label {
+          text-transform: uppercase;
+          font-size: 0.85em;
+          color: #c5c5c5; }
+          .deleverInformation .rejectionOder .reasons div label input[type="radio"] {
+            vertical-align: middle;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 1em;
+            height: 1em;
+            border: 1px solid #c5c5c5;
+            border-radius: 50%; }
+            .deleverInformation .rejectionOder .reasons div label input[type="radio"]:before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              display: block; }
+            .deleverInformation .rejectionOder .reasons div label input[type="radio"]:checked:before {
+              background-color: #5490cf; }
+    .deleverInformation .rejectionOder .descriptions {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: #c5c5c5; }
+      .deleverInformation .rejectionOder .descriptions div p {
+        margin-top: 1.5em; }
+      .deleverInformation .rejectionOder .descriptions textarea {
+        width: 90%;
+        border: 1px solid #c5c5c5;
+        margin-top: auto;
+        padding-left: 1em;
+        resize: none; }
+    .deleverInformation .rejectionOder .rejectionOderSubmit {
+      font-size: 0.85em;
+      padding: 0.8em 1.25em;
+      color: #fff;
+      border-radius: 1.425em;
+      border: 0;
+      background-color: #5495d5;
+      position: absolute;
+      top: 112%;
+      right: 3%; }
+  .deleverInformation .carPark {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    .deleverInformation .carPark .carParkItem {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 260px;
+      height: 360px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      border: 1px solid #C0C0C0;
+      font-size: 0.7em;
+      margin-bottom: 2em; }
+      .deleverInformation .carPark .carParkItem img {
+        width: 100%;
+        height: 175px;
+        border: none;
+        margin-bottom: 1em; }
+      .deleverInformation .carPark .carParkItem .carParkItemTitle {
+        text-align: center;
+        background: -webkit-gradient(linear, left top, left bottom, from(#c9c9c9), to(#c9c9c9));
+        background: -webkit-linear-gradient(#c9c9c9, #c9c9c9);
+        background: -o-linear-gradient(#c9c9c9, #c9c9c9);
+        background: linear-gradient(#c9c9c9, #c9c9c9);
+        background-size: 80% 1px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        margin-bottom: 1em; }
+        .deleverInformation .carPark .carParkItem .carParkItemTitle div {
+          font-size: 0.7em;
+          margin-bottom: 0.75em; }
+        .deleverInformation .carPark .carParkItem .carParkItemTitle h3 {
+          font-size: 1.25em; }
+      .deleverInformation .carPark .carParkItem .carParkItemFitures {
+        font-size: 0.6em; }
+        .deleverInformation .carPark .carParkItem .carParkItemFitures div {
+          margin: 0;
+          padding: 0; }
+        .deleverInformation .carPark .carParkItem .carParkItemFitures > div:first-child,
+        .deleverInformation .carPark .carParkItem .carParkItemFitures h3 {
+          text-align: center; }
+        .deleverInformation .carPark .carParkItem .carParkItemFitures > div:nth-child(3) {
+          margin-left: auto;
+          text-align: end;
+          padding-right: 1em; }
+          .deleverInformation .carPark .carParkItem .carParkItemFitures > div:nth-child(3) > div:nth-child(2) {
+            text-transform: uppercase; }
+  .deleverInformation nav {
+    margin: 2.8em 0 6em; }
+    .deleverInformation nav ul {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .deleverInformation nav ul .back {
+        width: 1.25em;
+        height: 1.25em;
+        display: inline-block;
+        background-image: url("../img/icons/back.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%; }
+      .deleverInformation nav ul .next {
+        width: 1.25em;
+        height: 1.25em;
+        display: inline-block;
+        background-image: url("../img/icons/next.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%; }
+      .deleverInformation nav ul .page-link {
+        border: 0px; }
+        .deleverInformation nav ul .page-link:hover {
+          border-bottom: 2px solid #5494d4;
+          border-radius: 0; }
+  .deleverInformation .clientsRequestsReviews {
+    margin: 5em 0 3em 0;
+    padding-left: 6.56em;
+    list-style: none; }
+    .deleverInformation .clientsRequestsReviews li {
+      margin-right: 0.15em;
+      display: inline-block; }
+      .deleverInformation .clientsRequestsReviews li:not(:first-child)::before {
+        content: '\B7';
+        margin-right: 0.15em; }
+    .deleverInformation .clientsRequestsReviews .clientsRequestsReviewsAll {
+      font-size: 1em; }
+    .deleverInformation .clientsRequestsReviews .clientsRequestsReviewsPositive {
+      font-size: 0.75em; }
+      .deleverInformation .clientsRequestsReviews .clientsRequestsReviewsPositive span:nth-child(1) {
+        color: #02dc30; }
+      .deleverInformation .clientsRequestsReviews .clientsRequestsReviewsPositive span:nth-child(2) {
+        color: #c0c0c0; }
+    .deleverInformation .clientsRequestsReviews .clientsRequestsReviewsNegative {
+      font-size: 0.75em; }
+      .deleverInformation .clientsRequestsReviews .clientsRequestsReviewsNegative span:nth-child(1) {
+        color: #f88777; }
+      .deleverInformation .clientsRequestsReviews .clientsRequestsReviewsNegative span:nth-child(2) {
+        color: #c0c0c0; }
+  .deleverInformation .clientsRequestsStory {
+    text-align: justify;
+    padding: 2em 6.56em; }
+  .deleverInformation .clientsRequestsSlogan,
+  .deleverInformation .clientsRequestsLocation {
+    text-align: center; }
+
+@media (min-width: 1600px) {
+  .cargoType .clientsRequestsOpenСargoTypeName {
+    text-align: start; } }
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.1em; }
+    body div label {
+      margin-left: 1.5em;
+      margin-right: 1em; }
+      body div label input[type="radio"] {
+        margin: 0 1em; } }
+
+@media (min-width: 1300px) {
+  body {
+    font-size: 1.2em; } }
+
+@media (max-width: 1200px) {
+  .reasons div label {
+    margin-left: 0.5em;
+    margin-right: 0.5em; }
+    .reasons div label input[type="radio"] {
+      margin: 0 0.5em; } }
+
+@media (min-width: 991.6px) {
+  .root,
+  .cargoType,
+  .comments {
+    background: -webkit-gradient(linear, left top, left bottom, from(#c9c9c9), to(#c9c9c9));
+    background: -webkit-linear-gradient(#c9c9c9, #c9c9c9);
+    background: -o-linear-gradient(#c9c9c9, #c9c9c9);
+    background: linear-gradient(#c9c9c9, #c9c9c9);
+    background-size: 1px 70%;
+    background-repeat: no-repeat;
+    background-position: 99% center; }
+  .deleverInformation > h3:nth-of-type(-n+2) {
+    margin-left: 3em; } }
+
+@media (max-width: 991.5px) {
+  body {
+    font-size: 1.2em; }
+    body .deleverInformation > h3:nth-of-type(-n+2) {
+      margin-left: 0;
+      text-align: center; }
+    body .deleverInformation .carentOrders,
+    body .deleverInformation .rejectionOder {
+      border: 1px solid #eee;
+      -webkit-box-shadow: 0 0px 10px rgba(225, 225, 225, 0.75);
+      box-shadow: 0 0px 10px rgba(225, 225, 225, 0.75);
+      position: relative;
+      margin-bottom: 3em; }
+      body .deleverInformation .carentOrders .reasons,
+      body .deleverInformation .rejectionOder .reasons {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+    body .deleverInformation .carentOrders .root,
+    body .deleverInformation .carentOrders .cargoType,
+    body .deleverInformation .carentOrders .comments {
+      border-bottom: 1px solid #c9c9c9; }
+    body .deleverInformation .carentOrders .root {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      body .deleverInformation .carentOrders .root .clientsRequestsOpenFitures {
+        width: 50%;
+        margin: 0; }
+        body .deleverInformation .carentOrders .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresLabel {
+          width: 30%; }
+          body .deleverInformation .carentOrders .root .clientsRequestsOpenFitures .clientsRequestsOpenFituresLabel div {
+            display: inline-block; }
+      body .deleverInformation .carentOrders .root .rootPrice {
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+    body .deleverInformation .carentOrders .cargoType {
+      text-align: center; }
+      body .deleverInformation .carentOrders .cargoType .clientsRequestsOpenСargoTypeName {
+        color: #222222;
+        font-size: 1em; } }
+
+@media (max-width: 767.5px) {
+  body {
+    font-size: 1.0em; } }

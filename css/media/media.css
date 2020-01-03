@@ -1,0 +1,278 @@
+@media screen and (min-width : 320px) and (max-width : 480px) {
+
+    .aboutText p{
+        font-size: 1em;
+    }
+    .aboutText span{
+        font-size: 1em;
+    }
+    .aboutText{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .rowAbout{
+        margin-bottom: 20px;
+    }
+    svg.horizontalCircle text{
+        font-size: 1.3em;
+    }
+    .serviceWorkFoto button{
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+    .serviceWorkFoto {
+
+    }
+    .serviceWorkSvg{
+        height: 150px;
+    }
+    .infoRegistration p{
+        font-size: 1em;
+    }
+    .infoRegistration span{
+        font-size: 1em;
+    }
+    .infoRegistration{
+        padding-left: 20px;
+    }
+    .infoCounter{
+        margin-left: 10px;
+    }
+    .infoCounter button{
+        float: left;
+    }
+    .FAQSender, .FAQDelivery{
+        width: 100%;
+        margin: 0;
+    }
+    .mailToLogo img{
+        display: none;
+    }
+    .mailToLogo span{
+        font-size: 1em;
+    }
+    .footerItems:last-child{
+        width: 250px;
+    }
+    .footerItems:nth-child(3){
+        width: 250px;
+        margin-left: 0;
+    }
+    .footerItems button{
+        margin-left: 25%;
+    }
+    .footerItems{
+        margin-bottom: 30px;
+    }
+    .rowBasement span{
+        font-size: 1em;
+    }
+    svg.horizontalCircle text {
+        font-size: 1em;
+    }
+    .serviceWorkFoto {
+
+    }
+   /* .itemsTariffHidden{
+        width:100%;
+            }
+    .tariffInfo{
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    .tariffInfo ul{
+        margin-top: 0;
+
+    }
+    .ratesText{
+        margin-bottom: 0;
+    }
+    .tarifInfoFooter{
+        display: none;
+    }*/
+    .newOrdersHead span:nth-child(1) {
+        font-size: 2em;
+    }
+    .viewArea {
+        width: 70%;
+    }
+
+}
+@media screen and (min-width : 480px) and (max-width : 715px){
+    .mailToLogo img{
+        display: none;
+    }
+    .footerItems:last-child{
+        width: 250px;
+    }
+    .footerItems:nth-child(3){
+        width: 250px;
+        margin-left: 0;
+    }
+    .footerItems button{
+        margin-left: 25%;
+    }
+    .footerItems{
+        margin-bottom: 30px;
+    }
+    svg.horizontalCircle text {
+        font-size: 2em;
+    }
+    .serviceWorkFoto {
+
+    }
+
+}
+@media screen and (max-width: 1036px){
+    .itemsTariffHidden{
+        width:100%;
+    }
+    .tariffInfo{
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    .tariffInfo ul{
+        margin-top: 0;
+
+    }
+    .ratesText{
+        margin-bottom: 0;
+    }
+    .tarifInfoFooter{
+        display: none;
+    }
+
+}
+@media screen and (min-width : 480px) and (max-width : 800px) {
+
+    .FAQSender, .FAQDelivery{
+        width: 100%;
+        margin: 20px;
+    }
+    .newOrdersHead span:nth-child(1) {
+        font-size: 1.5em;
+    }
+    .newOrdersHeadCarousel{
+        font-size: .9rem;
+    }
+
+    .ratesText{
+      font-size: 1em;
+    }
+
+
+}
+    @media screen and (min-width :993px) and (max-width : 1000px) {
+
+        .FAQSender, .FAQDelivery {
+            width: 40%;
+            margin: 20px;
+        }
+
+    }
+
+
+
+
+@media screen and (min-device-width : 480px) and (max-device-width : 994px) {/* iPads (portrait and landscape) ----------- */
+    .aboutText{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    svg.horizontalCircle text{
+        font-size: 2em;
+
+    }
+    .footerItems:last-child{
+        width: 250px;
+
+    }
+    .footerItems:nth-child(3){
+        width: 250px;
+        margin-left: 0;
+
+    }
+    .footerItems button{
+        margin-left: 25%;
+    }
+    .footerItems{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 960px)  {
+  .rowHeader {
+    padding-top: 20px;
+  }
+
+
+    .headerTrackImg{
+        display: none;
+    }
+    .button_box button{
+    right: 35%;
+
+
+    }
+    .aboutTextCounter{
+        justify-content: center;
+    }
+    svg.horizontalCircle text,svg.verticalCircle text{
+        font-size: 2em;
+    }
+
+}
+/* Desktops and laptops ----------- */
+@media  screen and (max-width : 700px) {
+.btn_media{
+  width: 110px;
+  height: 30px;
+  font-size: .6em;
+}
+.headerLogoFoto{
+  width: 130px;
+   height: 50px;
+}
+.headerLogo h1 {
+font-size:2em;
+}
+.serviceWorkFoto {
+  height: 200px;
+}
+
+.infoRegistration p{
+    font-size: .8em;
+}
+.infoRegistration span{
+    font-size: .8em;
+}
+.infoCounter span{
+    font-size: 4em;
+}
+.infoCounter button{
+    font-size: 2em;
+}
+
+.aboutText p, .aboutText span{
+  font-size:1em;
+}
+.itemsTariffHidden .tariffInfo .price{
+  font-size:1.5em; /**/
+}
+.counter{
+  font-size: 7em;
+}
+}
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+
+}
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
+}

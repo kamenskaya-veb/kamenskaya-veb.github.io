@@ -1,0 +1,88 @@
+.rowNavbar{
+    width: 100%;
+    height: 100px;
+   /* background-color:#B2EDFC;*/
+    background: #23485B;
+    /*background: -webkit-linear-gradient(180deg, rgb(106, 214, 249) 67%, rgb(1, 5, 17) 100%);
+    background: -o-linear-gradient(180deg, rgb(106, 214, 249) 67%, rgb(1, 5, 17) 100%);
+    background: -ms-linear-gradient(180deg, rgb(106, 214, 249) 67%, rgb(1, 5, 17) 100%);
+    background: linear-gradient(180deg, rgb(106, 214, 249) 67%, rgb(1, 5, 17) 100%);
+   */ margin: 0;
+    font-size: 1.1em;
+    font-family: "PF BeauSans Pro";
+}
+.navbarMenu{
+    width:100%;
+    position: relative;
+}
+.navbarMenu img{
+    position: absolute;
+   top:20px;
+}
+.menuList{
+    position: absolute;
+    right: 8%;
+    top:35px;
+    z-index: 100;
+    background-color:#23485B;
+}
+.menuList li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menuList li a{
+    color: #FAFAFA;
+    text-decoration: none;
+}
+.menuList li a:hover{
+    text-decoration: none;
+    color:#57CFE8;
+}
+.dropdownMenu{
+    position: relative;
+}
+.dropdownItem{
+    width: 200px;
+    position: absolute;
+    top:30px;
+    padding-left: 0;
+    background-color: #23485B;
+    color: #FAFAFA;
+    z-index: 105;
+    display: none;
+}
+.dropdownItem li{
+    display: block;
+    margin-top: 10px;
+    margin-right: 0;
+}
+.dropdownItem li a{
+    padding-left: 10px;
+}
+.dropdownItem li:hover{
+    color:#57CFE8;
+}
+.dropdownItem li:hover a{
+    color:#57CFE8;
+}
+ button.burger{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+     right: 10%;
+     top:15px;
+    background: url("../../img/icon/menu.svg") no-repeat;
+    background-size: contain;
+    border: 2px solid #ffffff;
+     outline: none;
+    width: 35px;
+    height: 35px;
+     z-index: 10;
+     display: none;
+}
+button.burger:hover{
+    background-color: #ffffff;
+}
