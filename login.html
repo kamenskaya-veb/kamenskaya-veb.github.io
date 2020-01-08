@@ -1,4 +1,3 @@
-<?php  session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +25,7 @@
 		<div class ='row'>
 			<div class='offset-1 col-10 offset-1 rowFormLogIn'>
 				<form action="php/formlog.php"  method="POST" name="formLogin" autocomplete="off">
-					<a  href="index.php"> <div class=' formLogInClose close'> </div></a>
+					<a  href="index.html"> <div class=' formLogInClose close'> </div></a>
 					<p class="formHead">Вход в аккаунт</p><br>
 					<input class="mail" type="email"  title="" name="mail" placeholder="Email адрес" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" minlength="4" maxlength="30" required><br>
 					<input class="passwrd" name="password" type="password" title="введите пароль(до 15 символов)"  placeholder="Пароль" pattern="\w{4,14}" minlength="4" maxlength="14" required>
@@ -104,7 +103,7 @@
 					<div class="dropdown">
 						<span id="dropdownSpan">Тарифный план</span>
 						<label for="chec"> <input id='chec' type="checkbox"> <span></span>
-							<ul class="dropdown-content" >
+							<ul class="dropdown-content">
 								<li><a href="#"><p class="small">Small<b class="bSmall">$99</b></p>
 									<em>подвозка людей и перевозка мелких грузов<br></em>
 									<em>до 500кг</em>

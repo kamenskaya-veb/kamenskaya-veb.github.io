@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded',function() {
 
 // dom
-    var popap_btn = document.querySelector(".popap__btn");
-    var popap = document.querySelector(".popap");
     var read = document.getElementsByClassName("readMessage");
     var airbus = document.querySelector(".airBusHidden");
     var item_gallery = document.querySelector(".itemsGallery");
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded',function() {
     var d = '';
     var counter = 0;
     let counter_robot = 1;
-    var cookies = document.cookie;
+   // var cookies = document.cookie;
 
 
 /*
@@ -37,10 +35,6 @@ document.addEventListener('DOMContentLoaded',function() {
         btn_login_creation();
     }
 */
-
-    popap_btn.addEventListener("click",function (event) {
-        popap.style.opacity = "0";
-    });
 
 
 //синий бордер при клике в галерее

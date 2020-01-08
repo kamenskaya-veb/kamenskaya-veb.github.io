@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded',function() {
     var container_fluid = document.querySelector('#container_fluid');
   var p_first = document.querySelector('#p_first');
+
+
   var container = document.querySelector('#container');
   var map_area = document.querySelectorAll('area');
   var div_hide = document.querySelector('#div_outer');
@@ -56,7 +58,8 @@ document.addEventListener('DOMContentLoaded',function() {
         event.stopPropagation();
         event.preventDefault();
         box.style.display = 'none';
-        div_hide.style.opacity = '0';
+        div_hide.style.display = 'none';
+        remove_adr();
     });
 
 
@@ -134,6 +137,83 @@ document.addEventListener('DOMContentLoaded',function() {
     });
 
 
+    div_hide.addEventListener('click', function (event) {
+        event.stopPropagation();
+        event.preventDefault();
+    });
+
+//перетаскивание блока drag and drop
+    var ie = 0;
+    var op = 0;
+    var ff = 0;
+    var browser = navigator.userAgent;
+    if (browser.indexOf("Opera") != -1) op = 1;
+    else {
+        if (browser.indexOf("MSIE") != -1) ie = 1;
+        else {
+            if (browser.indexOf("Firefox") != -1) ff = 1;
+        }
+    }
+    delta_x = 0;
+    delta_y = 0;
+    /* Ставим обработчики событий на нажатие и отпускание клавиши мыши */
+    div_hide.onmousedown  = saveXY;
+    if (op || ff) {
+        div_hide.addEventListener("onmousedown", saveXY, false);
+    }
+    document.onmouseup = clearXY;
+    /* При нажатии кнопки мыши попадаем в эту функцию */
+    function saveXY(obj_event) {
+
+        /* Получаем текущие координаты курсора */
+        if (obj_event) {
+            x = obj_event.pageX;
+            y = obj_event.pageY;
+        }
+        else {
+            x = window.event.clientX;
+            y = window.event.clientY;
+            if (ie) {
+                y -= 2;
+                x -= 2;
+            }
+        }
+        /* Узнаём текущие координаты блока */
+        x_block = div_hide.offsetLeft;
+        y_block = div_hide.offsetTop;
+        /* Узнаём смещение */
+        delta_x = x_block - x;
+        delta_y = y_block - y;
+        /* При движении курсора устанавливаем вызов функции moveWindow */
+        document.onmousemove = moveBlock;
+        if (op || ff)
+            document.addEventListener("onmousemove", moveBlock, false);
+    }
+    function clearXY() {
+        document.onmousemove = null; // При отпускании мыши убираем обработку события движения мыши
+    }
+    function moveBlock(obj_event) {
+        /* Получаем новые координаты курсора мыши */
+        if (obj_event) {
+            x = obj_event.pageX;
+            y = obj_event.pageY;
+        }
+        else {
+            x = window.event.clientX;
+            y = window.event.clientY;
+            if (ie) {
+                y -= 2;
+                x -= 2;
+            }
+        }
+        /* Вычисляем новые координаты блока */
+        new_x = delta_x + x;
+        new_y = delta_y + y;
+        div_hide.style.top = new_y + "px";
+        div_hide.style.left = new_x + "px";
+    }
+
+// end drag and drop
 
 
 
@@ -151,9 +231,8 @@ document.addEventListener('DOMContentLoaded',function() {
 
     //функция всплытия дива
     function div_position() {
-        div_hide.style.right = '-250px';
-        div_hide.style.top = '10px';
-        $(div_hide).animate({opacity: 1},500);
+        div_hide.style.display = 'block';
+       // $(div_hide).animate({display: 'block'},500);
     }
 // заполнение адресса
     function adr(reg) {
@@ -168,7 +247,13 @@ document.addEventListener('DOMContentLoaded',function() {
             }
         }
     }
-
+//очистка адреса
+    function remove_adr() {
+        for(var i=0; i<span_address.length; i++){
+            span_address[i].innerHTML = '';
+            span_address[i].innerHTML = '';
+        }
+    }
 
 
 });

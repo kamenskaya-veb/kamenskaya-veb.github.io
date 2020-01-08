@@ -31,21 +31,21 @@
             <div class="row rowNavbar">
                 <div class="offset-1 col-11 ">
                     <nav class="navbarMenu">
-                        <a class="" href="index.php"><img src="img/vektor.png" alt="" width="130" height="50"></a>
+                        <a class="" href="index.html"><img src="img/vektor.png" alt="" width="130" height="50"></a>
                         <button class="burger"></button>
                         <ul class="menuList" id="menuList">
-                            <li><a class="" href="index.php">Главная</a></li>
+                            <li><a class="" href="index.html">Главная</a></li>
                             <li><a class="" href="delivery.html ">Перевозчики</a></li>
                             <li><a class="" href="#">Заказчики</a></li>
                             <li class="dropdownMenu"><a class="" href="#">Сервис &#8594;</a>
                                 <ul class="dropdownItem" >
-                                    <li><a href="index.php#info">О нас</a></li>
-                                    <li><a href="index.php#work">Как это работает?</a></li>
-                                    <li><a href="index.php#news">Новости</a></li>
+                                    <li><a href="index.html#info">О нас</a></li>
+                                    <li><a href="index.html#work">Как это работает?</a></li>
+                                    <li><a href="index.html#news">Новости</a></li>
                                     <li><a href="#">Контакты</a></li>
                                 </ul>
                             </li>
-                            <li><a class="" href="index.php#qwert">Тарифы</a></li>
+                            <li><a class="" href="index.html#qwert">Тарифы</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -54,26 +54,24 @@
             <div class="row rowSvg">
                 <div class="offset-2 col-10 AboutSvg">
                     <div class="AboutsvgItem">
-                        <svg width="220" height="100">
-                            <line x1="50%" y1="0" x2="50%" y2="100" stroke="#57CFE8" stroke-width="5" />
+                        <svg class="verticalCircle"  fill="#57CFE8">
+                            <line x1="50%" y1="0" x2="50%" y2="50%" stroke="#57CFE8" stroke-width="5" />
+                            <circle  cx="50%" cy="50%" />
+                            <text x="21%" y="54%" font-size="24" fill="#ffffff" >Контакты</text>
                         </svg>
-                        <br>
-                        <svg width="220" height="98" fill="#57CFE8">
-                            <circle r="29%" cx="50%"cy="50%" />
-                            <text x="5%" y="60%"  fill="#ffffff" font-family="Verdana, serif" font-weight="500" font-size="36">Контакты</text>
-                        </svg>
+
                     </div>
                 </div>
             </div>
 
             <div class="row rowMap">
-                <div class="map" id="map">
-                    <img src="img/Oblasti.gif" alt="" usemap="#imgmap20191119231656">
+                <div class="col-12 map" id="map">
+                    <img src="img/Oblasti.gif" alt="" usemap="#imgmap20191119231656" id="map__img">
                         <map id="imgmap20191119231656" name="imgmap20191119231656">
-                            <area id="volyn_region" shape="circle" alt="Волынская область" title="" coords="122,71,48" href="" target=""  />
+                            <area id="volyn_region" shape="circle" alt="Волынская область" title="" coords="122,71,48" href="#" target=""  />
                             <area id="zhytomyr_region" shape="circle" alt="Житомирская область" title="" coords="276,105,50" href="#" target=""/>
                             <area  id="roven_region" shape="rect" alt="Ровенская область" title="" coords="172,38,221,125" href="#" target="" />
-                            <area id="lvov_region" shape="circle" alt="Львовская область" title="" coords="76,160,40" href="#" target="" />
+                            <area id="lvov_region" shape="circle" alt="Львовская область" title="" coords="76,160,40" href="#" target=""  />
                             <area id="transcarpathian_region" shape="circle" alt="Закарпатская область" title="" coords="47,245,35" href="#" target="" />
                             <area id="ivano-frankivsk_region" shape="circle" alt="Ивано-Франковская область" title="" coords="111,224,33" href="#" target="" />
                             <area id="ternopil_region" shape="circle" alt="Тернопольская область" title="" coords="153,178,34" href="#" target="" />
@@ -107,8 +105,8 @@
                         <div id="div_bottom">
                             <h4>Начать диалог</h4>
                             <p id="p_first">&#8195;По работе сайта</p>
-                            <p>&#8195;По вопросам доставки</p>
-                            <p>&#8195;По вопросам сотрудничества</p>
+                            <p id="p_second">&#8195;По вопросам доставки</p>
+                            <p id="p_third">&#8195;Преимущества сотрудничества</p>
                         </div>
                     </div>
                     <div class="loader">
@@ -160,16 +158,16 @@
                         <ul>
                             <li><a class="settingLink" href="delivery.html">Перевозчики</a></li>
                             <li><a class="settingLink" href="">Заказы</a></li>
-                            <li><a class="settingLink" href="index.php#work">Как это работает?</a></li>
-                            <li><a class="settingLink" href="index.php#qwert">Тарифы</a></li>
+                            <li><a class="settingLink" href="index.html#work">Как это работает?</a></li>
+                            <li><a class="settingLink" href="index.html#qwert">Тарифы</a></li>
                             <li><a class="settingLink" href="">Правила</a></li>
                         </ul>
                     </div>
                     <div class="footerItems">
                         <h6>информация</h6>
                         <ul>
-                            <li><a class="settingLink" href="index.php#info">О нас</a></li>
-                            <li><a class="settingLink" href="index.php#news">Новости</a></li>
+                            <li><a class="settingLink" href="index.html#info">О нас</a></li>
+                            <li><a class="settingLink" href="index.html#news">Новости</a></li>
                             <li><a class="settingLink" href="#">Контакты</a></li>
                         </ul>
                         <ul class ="langList">
